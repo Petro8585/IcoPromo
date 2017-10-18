@@ -1,0 +1,77 @@
+.whitepaper__start {
+  padding-top: 50px;
+}
+.whitepaper {
+  &__content {
+    img {
+      box-shadow: 0 14px 24px rgba(50, 49,58, .25);
+    }
+    .rentberry-website {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    &-description {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .download-whitepaper {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      a {
+        padding-left: 50px;
+        position: relative;
+        &::before {
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          content: "";
+          width: 35px;
+          position: absolute;
+          height: 25px;
+          display: inline-block;
+          background: url("/images/download_whitepaper_purple.svg") center no-repeat;
+        }
+        &:hover {
+          span {
+            border-color: $color-purpleDark;
+          }
+        }
+      }
+      span {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: bold;
+        color: $color-purpleDark;
+        transition: .2s ease-out;
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+}
+
+@media ($mobile) {
+  .whitepaper {
+    img {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media ($desktop) {
+  .whitepaper__start {
+    margin-top: 50px;
+    padding-top: 85px;
+  }
+  .whitepaper {
+    &__content {
+      &-description {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+}

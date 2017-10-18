@@ -1,0 +1,42 @@
+{
+  "title": "Partners",
+  "description": "Over the past several years we have established long-lasting <br class=\"desktop-only\"> partnerships with the leading companies in the blockchain, <br class=\"desktop-only\"> real estate, legal, and tech space to make our product <br class=\"desktop-only\"> offering even more appealing.",
+  "items": [
+    {
+      "src": "/images/partners/3.jpg",
+      "srcset": "/images/partners/3@2x.jpg 2x",
+      "name": "Cryptonomos",
+      "description": "Book building platform focused exclusively on cryptocurrency projects"
+    },
+    {
+      "src": "/images/partners/5.jpg",
+      "srcset": "/images/partners/5@2x.jpg 2x",
+      "name": "Melrose PR",
+      "description": "International PR Firm with deep blockchain expertise"
+    },
+    {
+      "src": "/images/partners/4.jpg",
+      "srcset": "/images/partners/4@2x.jpg 2x",
+      "name": "Skadden",
+      "description": "#1 law firm in securities and tax law (vault ranking)"
+    },
+    {
+      "src": "/images/partners/7.jpg",
+      "srcset": "/images/partners/7@2x.jpg 2x",
+      "name": "Idology",
+      "description": "Identity Verification Provider"
+    },
+    {
+      "src": "/images/partners/10.jpg",
+      "srcset": "/images/partners/10@2x.jpg 2x",
+      "name": "CoStar Group",
+      "description": "Real Estate Corporation, Owner of Apartments.com"
+    },
+    {
+      "src": "/images/partners/11.jpg",
+      "srcset": "/images/partners/11@2x.jpg 2x",
+      "name": "Move Inc.",
+      "description": "Subsidiary of News Corporation,  Owner of Realtor.com"
+    }
+  ]
+}

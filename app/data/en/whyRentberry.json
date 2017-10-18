@@ -1,0 +1,196 @@
+{
+  "videos": [
+    {
+      "name": "Steve Burton (USA)",
+      "position": "Partner",
+      "company": "Beechwood Ventures",
+      "videoUrl": "https://www.youtube.com/embed/xCZD4qnvH9U?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Steve_Burton.png",
+      "imgUrl2x": "/images/videos/Steve_Burton@2x.png 2x"
+    },
+    {
+      "name": "Trevor Bond (USA)",
+      "position": "Co-chair",
+      "company": "HBS Alumni Angels",
+      "videoUrl": "https://www.youtube.com/embed/VY33TKfKFPc?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Trevor_Bond.png",
+      "imgUrl2x": "/images/videos/Trevor_Bond@2x.png 2x"
+    },
+    {
+      "name": "Gary Macbeth (Australia)",
+      "position": "Partner",
+      "company": "808 Ventures",
+      "videoUrl": "https://www.youtube.com/embed/EB4zKoU8x5w?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Gary_Macbeth.png",
+      "imgUrl2x": "/images/videos/Gary_Macbeth@2x.png 2x"
+    },
+    {
+      "name": "Beat Neukom (Germany)",
+      "position": "CFO",
+      "company": "Merz Group",
+      "videoUrl": "https://www.youtube.com/embed/19sfK5J5oxA?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Beat_Neukom.png",
+      "imgUrl2x": "/images/videos/Beat_Neukom@2x.png 2x"
+    },
+    {
+      "name": "Alexandre Beauchet (France)",
+      "position": "Florac Private Equity",
+      "company": "Investment Professional",
+      "videoUrl": "https://www.youtube.com/embed/uWXpoKOIEoY?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Alexandre_Beauchet.png",
+      "imgUrl2x": "/images/videos/Alexandre_Beauchet@2x.png 2x"
+    },
+    {
+      "name": "Matthew Cottis (UK)",
+      "position": "Partner",
+      "company": "Hogan Lovells",
+      "videoUrl": "https://www.youtube.com/embed/ojXOue1sJEo?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Matthew_Cottis.png",
+      "imgUrl2x": "/images/videos/Matthew_Cottis@2x.png 2x"
+    },
+    {
+      "name": "Nicolas Hien (Canada)",
+      "position": "Vice President",
+      "company": "Dollarama",
+      "videoUrl": "https://www.youtube.com/embed/ci2FcGF2Jcc?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Nicolas_Hien.png",
+      "imgUrl2x": "/images/videos/Nicolas_Hien@2x.png 2x"
+    },
+    {
+      "name": "Leslie Bai (USA)",
+      "position": "President",
+      "company": "Siemic Corporation",
+      "videoUrl": "https://www.youtube.com/embed/1r43qCmGPyg?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Leslie_Bai.png",
+      "imgUrl2x": "/images/videos/Leslie_Bai@2x.png 2x"
+    },
+    {
+      "name": "Sun Lihua (China)",
+      "position": "Partner",
+      "company": "JadeValue VC Fund",
+      "videoUrl": "https://www.youtube.com/embed/58-ui5aRTfI?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Jade_Value.png",
+      "imgUrl2x": "/images/videos/Jade_Value@2x.png 2x"
+    },
+    {
+      "name": "William Robinson (USA)",
+      "position": "Head of Patent Team",
+      "company": "Lookout",
+      "videoUrl": "https://www.youtube.com/embed/s7ythPxvWLE?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/William_Robinson.png",
+      "imgUrl2x": "/images/videos/William_Robinson@2x.png 2x"
+    },
+    {
+      "name": "Neil Sinclair (USA)",
+      "position": "President",
+      "company": "Sinclair Real Estate",
+      "videoUrl": "https://www.youtube.com/embed/yctztqedxmQ?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Neil_Sinclair.png",
+      "imgUrl2x": "/images/videos/Neil_Sinclair@2x.png 2x"
+    },
+    {
+      "name": "Girish Amin (USA)",
+      "position": "Global Senior Manager",
+      "company": "Lenovo",
+      "videoUrl": "https://www.youtube.com/embed/gf3uA8CDeGQ?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Girish_Amin.png",
+      "imgUrl2x": "/images/videos/Girish_Amin@2x.png 2x"
+    },
+    {
+      "name": "Steven Baker (USA)",
+      "position": "Co-Founder",
+      "company": "Laserlike",
+      "videoUrl": "https://www.youtube.com/embed/BH2hgHId_iI?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Steven_Baker.png",
+      "imgUrl2x": "/images/videos/Steven_Baker@2x.png 2x"
+    },
+    {
+      "name": "Raj Nair (USA)",
+      "position": "VP Technology",
+      "company": "Ericsson",
+      "videoUrl": "https://www.youtube.com/embed/CmcXa8tp1mM?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Raj_Nair.png",
+      "imgUrl2x": "/images/videos/Raj_Nair@2x.png 2x"
+    },
+    {
+      "name": "Oliver Haas (Germany)",
+      "position": "Investment Manager",
+      "company": "Hidden Peak Capital",
+      "videoUrl": "https://www.youtube.com/embed/GN_Y6NIH5LA?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Oliver_Haas.png",
+      "imgUrl2x": "/images/videos/Oliver_Haas@2x.png 2x"
+    },
+    {
+      "name": "Paolo Zapparoli (USA)",
+      "position": "President",
+      "company": "92 Ventures",
+      "videoUrl": "https://www.youtube.com/embed/eVLVjqNyKLs?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Paolo_Zapparoli.png",
+      "imgUrl2x": "/images/videos/Paolo_Zapparoli@2x.png 2x"
+    },
+    {
+      "name": "Marco Rossi (USA)",
+      "position": "Vice President",
+      "company": "Siemens",
+      "videoUrl": "https://www.youtube.com/embed/w_AoShFjkvc?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Marco_Rossi.png",
+      "imgUrl2x": "/images/videos/Marco_Rossi@2x.png 2x"
+    },
+    {
+      "name": "Trevor Richards (USA)",
+      "position": "CTO",
+      "company": "Lightwell Corporation",
+      "videoUrl": "https://www.youtube.com/embed/ePf_uClub4A?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Trevor_Richards.png",
+      "imgUrl2x": "/images/videos/Trevor_Richards@2x.png 2x"
+    },
+    {
+      "name": "Sohil Sami (USA)",
+      "position": "Global VP",
+      "company": "Openet",
+      "videoUrl": "https://www.youtube.com/embed/SzxdKuywToI?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Sohil_Sami.png",
+      "imgUrl2x": "/images/videos/Sohil_Sami@2x.png 2x"
+    },
+    {
+      "name": "Raymundo Sidon (USA)",
+      "position": "Vice President",
+      "company": "Maxon",
+      "videoUrl": "https://www.youtube.com/embed/vHtjp2kQNZk?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Raymundo_Sidon.png",
+      "imgUrl2x": "/images/videos/Raymundo_Sidon@2x.png 2x"
+    },
+    {
+      "name": "Adrian Kizyma (USA)",
+      "position": "President",
+      "company": "Kizyma Enterprises",
+      "videoUrl": "https://www.youtube.com/embed/mjPt0jlY6xw?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Adrian_Kizyma.png",
+      "imgUrl2x": "/images/videos/Adrian_Kizyma@2x.png 2x"
+    },
+    {
+      "name": "Brian May (USA)",
+      "position": "Vice President",
+      "company": "Founders Brewing",
+      "videoUrl": "https://www.youtube.com/embed/_4RvcaBTdu4?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Brian_May.png",
+      "imgUrl2x": "/images/videos/Brian_May@2x.png 2x"
+    },
+    {
+      "name": "Michael Fernandez (USA)",
+      "position": "CEO",
+      "company": "Factory 360",
+      "videoUrl": "https://www.youtube.com/embed/-LXGHt-i2IU?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Michael_Fernandez.png",
+      "imgUrl2x": "/images/videos/Michael_Fernandez@2x.png 2x"
+    },
+    {
+      "name": "Vlad Nester & Vitaly Rizhkov (USA)",
+      "position": "Partners",
+      "company": "Zing Capital Group",
+      "videoUrl": "https://www.youtube.com/embed/tVQ7xPcYJns?autoplay=1&rel=0",
+      "imgUrl": "/images/videos/Zing_Capital.png",
+      "imgUrl2x": "/images/videos/Zing_Capital@2x.png 2x"
+    }
+  ]
+}

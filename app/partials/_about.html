@@ -1,0 +1,234 @@
+<section class="ico-about" id="about" data-order="1">
+
+  <div class="press-logos desktop-only">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-xs col-md-offset-1">
+          <ul>
+            <li>
+              <a target="_blank"
+                 href="https://www.wsj.com/articles/want-that-apartment-you-may-have-to-bid-for-it-1491134407"
+                 class="one-logo one-logo-wsj">
+              </a>
+            </li>
+            <li>
+              <a target="_blank"
+                 href="https://www.digitaltrends.com/home/landlords-auctioning-apartments-online/#:P9TBFH3UVJalOA"
+                 class="one-logo one-logo-digital">
+              </a>
+            </li>
+            <li>
+              <a target="_blank"
+                 href="http://www.wtsp.com/news/local/new-website-lets-you-bid-on-your-rent/430080441"
+                 class="one-logo one-logo-10news">
+              </a>
+            </li>
+            <li>
+              <a target="_blank"
+                 href="http://www.pressheretv.com/bid-on-your-next-apartment/"
+                 class="one-logo one-logo-nbc">
+              </a>
+            </li>
+            <li>
+              <a target="_blank"
+                 href="http://pix11.com/2016/05/25/new-site-lets-tenants-name-their-own-rent-in-ebay-styled-auction/"
+                 class="one-logo one-logo-pix">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about__content">
+    <div class="container">
+      <div class="row" data-animate="true">
+        <div class="col-md-6 col-xs-10 col-xs-offset-1 col-md-offset-0">
+          <div class="section-header">@about.title</div>
+        </div>
+        <!--<div class="col-md-6 col-xs-10 col-xs-offset-1 col-md-offset-0">-->
+        <!--<p class="light-gray-color">@about.description</p>-->
+        <!--</div>-->
+      </div>
+
+      <div class="about-list" id="about-list">
+        <div class="row">
+          @for (var i = 0; i < about.items.length; i++) {
+          <div class="col-md-6 col-xs-10 col-xs-offset-1 col-md-offset-0 one-description"
+               data-animate="true"
+               data-animate-transform="true"
+               data-animate-delay="`+(i > 1 ? Math.ceil((i - 1) / 2) : 0) * 300+`"
+               data-animate-target="#about-list">
+            <div class="row">
+              <div class="col-md-2 col-xs-12">
+                <span class="about-icon">
+                </span>
+              </div>
+              <div class="col-md-8">
+                <div class="small-title">`+about.items[i].title+`</div>
+                <div class="text">
+                  <p>`+about.items[i].description+`</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div><!--about-list-->
+
+      <div class="our-mission"
+           data-animate="true"
+           data-animate-transform="true"
+           data-animate-delay="600"
+           data-animate-target="#about-list">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-0 col-xs-offset-1 col-xs-10">
+            <div class="our-mission-text">
+              <h3 class="our-mission-text-title">@about.ourMission.title</h3>
+              <p class="our-mission-text-description">@about.ourMission.description</p>
+            </div>
+          </div>
+          <div class="col-md-5 col-md-offset-1 col-xs-offset-1 col-xs-10">
+            <div class="our-mission-img" data-url="@about.ourMission.videoUrl">
+              <img src="@about.ourMission.imgUrl" srcset="@about.ourMission.imgUrl2x" alt="@about.ourMission.title">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="problems">
+        <div class="row" data-animate="true">
+          <div class="col-md-6 col-xs-10 col-xs-offset-1 col-md-offset-0">
+            <div class="section-header">@about.problems.title</div>
+          </div>
+        </div>
+        <div class="problems-items">
+          @for (var i = 0; i < about.problems.items.length; i++) {
+          <div class="problems-item"
+               data-animate="true"
+               data-animate-transform="true"
+               data-animate-delay="`+i * 300+`"
+               data-animate-target=".problems-items">
+            <div class="row middle-md">
+              <div class="col-md-4 first-md col-md-offset-0 col-xs-offset-1 col-xs-10">
+                <div class="problems-item-title">`+about.problems.items[i].item1.title+`</div>
+                <div class="problems-item-subtitle">`+about.problems.items[i].item1.subtitle+`</div>
+                <div class="problems-item-description">`+about.problems.items[i].item1.description+`</div>
+              </div>
+              <div class="col-md-4 first-xs col-md-offset-0 col-xs-offset-1 col-xs-7">
+                <div class="problems-item-img">
+                  <img src="`+about.problems.items[i].img.url+`" srcset="`+about.problems.items[i].img.url2x+`"
+                       alt="`+about.problems.items[i].img.alt+`">
+                </div>
+              </div>
+              <div class="col-md-4 col-md-offset-0 col-xs-offset-1 col-xs-10">
+                <div class="problems-item-title">`+about.problems.items[i].item2.title+`</div>
+                <div class="problems-item-subtitle">`+about.problems.items[i].item2.subtitle+`</div>
+                <div class="problems-item-description">`+about.problems.items[i].item2.description+`</div>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="solution">
+      <div class="container">
+        <div class="row" data-animate="true">
+          <div class="col-md-5 col-xs-10 col-xs-offset-1 col-md-offset-0">
+            <div class="section-header">@about.solution.title</div>
+          </div>
+          <div class="col-md-6 col-xs-10 col-xs-offset-1 col-md-offset-0">
+            <p class="light-gray-color">@about.solution.description</p>
+          </div>
+        </div>
+      </div>
+      <div class="solution-img">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10 col-xs-offset-1 col-xs-10">
+              <img src="/images/solution/rentberry-rental-platform.png"
+                   srcset="/images/solution/rentberry-rental-platform@2x.png 2x"
+                   alt="Rentberry Rental platform"
+                   data-animate="true">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="technology">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-0 col-xs-offset-1 col-xs-10 technology-content">
+              <div class="technology-img row"
+                   data-animate="true"
+                   data-animate-target=".technology"
+                   data-animate-delay="300"
+                   data-animate-transform="true">
+                <div class="col-md-12 col-xs-10">
+                  <img src="/images/solution/2.png" srcset="/images/solution/2@2x.png 2x" alt="">
+                </div>
+              </div>
+              <div class="technology-text"
+                   data-animate="true"
+                   data-animate-target=".technology"
+                   data-animate-delay="600"
+                   data-animate-transform="true">
+                <div class="technology-text-title">@about.solution.technology.block2.title</div>
+                <div class="technology-text-subtitle">@about.solution.technology.block2.subtitle</div>
+                <div class="technology-text-description">@about.solution.technology.block2.description</div>
+              </div>
+            </div>
+            <div class="col-md-4 col-md-offset-3 col-xs-offset-1 col-xs-10 technology-content">
+              <div class="technology-img row"
+                   data-animate="true"
+                   data-animate-target=".technology"
+                   data-animate-delay="300"
+                   data-animate-transform="true">
+                <div class="col-md-12 col-xs-10">
+                  <img src="/images/solution/1.png" srcset="/images/solution/1@2x.png 2x" alt="">
+                </div>
+              </div>
+              <div class="technology-text"
+                   data-animate="true"
+                   data-animate-target=".technology"
+                   data-animate-delay="600"
+                   data-animate-transform="true">
+                <div class="technology-text-title">@about.solution.technology.block1.title</div>
+                <div class="technology-text-subtitle">@about.solution.technology.block1.subtitle</div>
+                <div class="technology-text-description">@about.solution.technology.block1.description</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="under-hood">
+      <div class="container">
+        <div class="row"
+             data-animate="true">
+          <div class="col-md-5 col-xs-10 col-xs-offset-1 col-md-offset-0">
+            <div class="under-hood-title">@about.underHood.title</div>
+          </div>
+          <div class="col-md-6 col-xs-10 col-xs-offset-1 col-md-offset-0">
+            <p class="light-gray-color under-hood-description">@about.underHood.description</p>
+          </div>
+        </div>
+
+        <div class="under-hood-img">
+          <div class="row"
+               data-animate="true"
+               data-animate-target=".under-hood-img"
+               data-animate-delay="300"
+               data-animate-transform="true">
+            <div class="col-md-12 col-xs-10 col-xs-offset-1 col-md-offset-0 text-center">
+              <img src="/images/solution/under-hood.png" srcset="/images/solution/under-hood@2x.png 2x" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+<header class="container-fluid white-block">
+  <div class="row middle-md">
+    <div class="col-xs logo-wrapper">
+      <a href="#" class="logo" id="logo">
+        <img src="/images/logo.png" srcset="/images/logo@2x.png 2x" alt="logo">
+      </a>
+    </div>
+    <nav class="col-md-8 nav" id="app-nav">
+      <div class="mobile-menu-header mobile-only">
+        <div class="languages-dropdown">
+          <!--<div class="current-language" id="languages-dropdown-toggle-mobile">@lang</div>-->
+          <!--<div class="languages-list" id="languages-dropdown-menu-mobile">-->
+            <!--@for (var i = 0; i < header.langs.length; i++) {-->
+              <!--<a class="languages-list-item `+(header.langs[i] === lang ? 'active' : '')+`"-->
+                 <!--href="/`+(header.langs[i] === 'en' ? '' : header.langs[i])+`">`+header.langs[i]+`</a>-->
+            <!--}-->
+          <!--</div>-->
+        </div>
+        <div class="menu-close"></div>
+      </div>
+      <div class="links-wrapper">
+        <a href="#about" title="@header.menu.about">@header.menu.about</a>
+        <a href="#ico-details" title="@header.menu.icoDetails">@header.menu.icoDetails</a>
+        <a href="#whitepaper" title="@header.menu.whitepaper">@header.menu.whitepaper</a>
+        <a href="#product" title="@header.menu.product">@header.menu.product</a>
+        <a href="#why-rentberry" title="@header.menu.whyRentberry">@header.menu.whyRentberry</a>
+        <a href="#team" title="@header.menu.team">@header.menu.team</a>
+      </div>
+      <div class="mobile-menu-action mobile-only">
+        <button class="stay-updated stay-updated-btn">@header.stayUpdated</button>
+      </div>
+      <span class="marker desktop-only"></span>
+    </nav>
+    <div class="col-md stay-updated-wrapper desktop-only">
+      <div class="languages-dropdown">
+        <!--<div class="current-language" id="languages-dropdown-toggle">@lang</div>-->
+        <!--<div class="languages-list" id="languages-dropdown-menu">-->
+          <!--@for (var i = 0; i < header.langs.length; i++) {-->
+            <!--<a class="languages-list-item `+(header.langs[i] === lang ? 'active' : '')+`"-->
+               <!--href="/`+(header.langs[i] === 'en' ? '' : header.langs[i])+`">`+header.langs[i]+`</a>-->
+          <!--}-->
+        <!--</div>-->
+      </div>
+      <button class="stay-updated stay-updated-btn">@header.stayUpdated</button>
+    </div>
+
+    <div class="menu-toggle mobile-only" id="menu-toggle"></div>
+  </div>
+</header>

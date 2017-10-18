@@ -1,0 +1,579 @@
+.team-section {
+  background-image: linear-gradient(135deg, #FFFFFF 0%, #F0EEFA 69%, #E9E6F7 100%);
+  position: relative;
+  padding: 115px 0;
+  .linkedin-icon {
+    width: 16px;
+    height: 28px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(/images/linkedin-icon.svg) center no-repeat;
+  }
+  .advisors-container {
+    margin-top: 50px;
+    .all-investors {
+      &-list {
+        //.container {
+        //  &::after {
+        //    background-image: linear-gradient(180deg, rgba(236, 234, 247, 0.00) 3%, #EBE9F8 73%);
+        //  }
+        //}
+      }
+    }
+  }
+
+  .all-investors {
+    margin-top: 30px;
+
+    &-list {
+      position: relative;
+      overflow: hidden;
+      .container {
+        position: relative;
+        max-height: 100%;
+
+        //&::after {
+        //  content: '';
+        //  position: absolute;
+        //  left: 10px;
+        //  bottom: 0;
+        //  width: calc(100% - 20px);
+        //  height: 125px;
+        //  background-image: linear-gradient(180deg, rgba(238, 236, 249, 0.00) 0%, #EDEBF8 100%);
+        //  transition: .2s ease;
+        //  display: none;
+        //}
+      }
+
+      &-item {
+        margin-top: 40px;
+        &:not(:nth-child(5n+1)) {
+          margin-left: 20px;
+        }
+        .investor-img-wrapper {
+          border-radius: 8px;
+          overflow: hidden;
+          font-size: 0;
+          //box-shadow: 0 28px 48px 0 rgba(50, 49, 58, .25);
+          background: #fff;
+          padding-bottom: 100%;
+          height: 0;
+          position: relative;
+
+          img {
+            border-radius: 8px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        .investor-content-wrapper {
+          margin-top: 20px;
+          font-size: 14px;
+          line-height: 24px;
+
+          .investor-name {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .all-investors-action {
+      text-align: center;
+      font-size: 0;
+      display: none;
+
+      span {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: bold;
+        color: $color-purpleDark;
+        cursor: pointer;
+      }
+    }
+
+    &.animate {
+      .all-investors-list {
+        .container {
+          &::after {
+            opacity: 0;
+            height: 0;
+          }
+
+          //.all-investors-list-item {
+          //  .investor-img-wrapper {
+          //    box-shadow: 0 28px 48px 0 rgba(50, 49, 58, 0.25) !important;
+          //  }
+          //}
+        }
+      }
+    }
+
+    &.closed {
+      .all-investors-list {
+        -webkit-mask-image: linear-gradient(to top, rgba(255,255,255,0) 4%,rgba(255,255,255,1) 40%);
+        height: 520px;
+
+        @include size(desktop-md) {
+          height: 490px;
+        }
+
+        @include size(desktop-sm) {
+          height: 475px;
+        }
+
+        .container {
+          &::after {
+            display: block;
+          }
+
+          .all-investors-list-item {
+            &:nth-child(n + 7) {
+              .investor-img-wrapper {
+                box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+      .all-investors-action {
+        display: block;
+      }
+    }
+  }
+
+  .all-investors-list {
+    transition: all .3s ease-out;
+  }
+
+  .investors-container {
+    padding-top: 150px;
+    .investors-header-wrapper {
+      padding-top: 35px;
+      .investors-countries-wrapper {
+        margin-top: 70px;
+      }
+      .founds-raised {
+        .counter-img {
+          width: 70px;
+          height: 70px;
+          position: relative;
+          vertical-align: middle;
+          display: inline-block;
+          border-radius: 50%;
+          box-shadow: 0 14px 24px rgba(50, 49, 58, 0.1);
+          background: #F4F5F7 url(/images/about-icons/4.svg) center no-repeat;
+        }
+        .numbers-block {
+          vertical-align: middle;
+          margin-left: 30px;
+          display: inline-block;
+        }
+        &-value {
+          font-size: 40px;
+          line-height: 49px;
+          font-weight: bold;
+        }
+        &-label {
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+
+      .investors-countries {
+        display: flex;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: bold;
+
+        &-list {
+          &:not(:first-of-type) {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .team-container {
+    .all-team-photo {
+      display: none;
+    }
+    .number-container {
+      .number {
+        font-size: 40px;
+        display: block;
+        font-weight: bold;
+      }
+      .text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .big-team {
+      margin-top: 100px;
+      .image {
+        border: 10px solid #fff;
+        box-shadow: 0 14px 24px rgba(50, 49, 58, .25);
+        img {
+          display: block;
+        }
+      }
+      .name {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      .position {
+        text-align: center;
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 5px;
+      }
+      .description {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .all-team-wrapper {
+      &.closed {
+        &.animate {
+          .all-team {
+            .container {
+              &::after {
+                opacity: 0;
+                height: 0;
+              }
+              .one-person {
+                .image {
+                  box-shadow: 0 14px 24px rgba(50, 49, 58, .25) !important;
+                }
+              }
+            }
+          }
+        }
+        .all-team {
+          overflow: hidden;
+          height: 404px;
+          -webkit-mask-image: linear-gradient(to top, rgba(255,255,255,0) 4%,rgba(255,255,255,1) 40%);
+
+          @include size(desktop-md) {
+            height: 410px;
+          }
+
+          @include size(desktop-lg) {
+            height: 440px;
+          }
+
+          .container {
+            &::after {
+              display: block;
+            }
+            .one-person {
+              &:nth-child(n+7) {
+                .image {
+                  img {
+                    box-shadow: none;
+                  }
+                }
+              }
+              .image {
+                position: relative;
+                text-align: center;
+                &::before {
+                  content: "";
+                  display: block;
+                  padding-top: 100%;
+                }
+                img {
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+        .all-team-action {
+          display: block;
+        }
+      }
+      .all-team {
+
+        margin-top: 40px;
+        position: relative;
+        .container {
+          position: relative;
+          max-height: 100%;
+
+          //&::after {
+          //  bottom: 0;
+          //  left: 10px;
+          //  content: "";
+          //  height: 120px;
+          //  width: calc(100% - 20px);
+          //  background-image: linear-gradient(180deg, rgba(248, 248, 253, 0.00) 3%, #F6F5FC 73%);
+          //  position: absolute;
+          //  display: none;
+          //  transition: .2s ease;
+          //}
+        }
+        .image {
+          border: 10px solid #fff;
+          box-shadow: 0 14px 24px rgba(50, 49, 58, .25);
+          img {
+            display: block;
+          }
+        }
+        .one-person {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin-top: 30px;
+          .image {
+            flex-grow: 1;
+          }
+        }
+        .name {
+          margin-top: 20px;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .position {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      .all-team-action {
+        display: none;
+        font-size: 0;
+        text-align: center;
+
+        .show-all-team {
+          color: $color-purpleDark;
+          font-size: 20px;
+          line-height: 28px;
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .partners-container {
+    margin-top: 50px;
+
+    .all-partners {
+      margin-top: 70px;
+
+      .partners-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-item {
+          flex: 0 0 26%;
+
+          &:nth-child(n + 4) {
+            margin-top: 50px;
+          }
+
+          .partner-logo {
+            //box-shadow: 0 28px 48px 0 rgba(50, 49, 58, .25);
+            border-radius: 8px;
+            font-size: 0;
+            overflow: hidden;
+            max-width: 260px;
+            margin: 0 auto;
+          }
+
+          .partner-info {
+            margin: 24px auto 0;
+            max-width: 260px;
+
+            &-name {
+              font-size: 16px;
+              line-height: 22px;
+              font-weight: bold;
+            }
+
+            &-description {
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ($mobile) {
+  .team-section {
+    padding: 50px 0;
+    .partners-container {
+      .all-partners {
+        .partners-list {
+          &-item {
+            flex: 0 0 auto;
+            width: 50%;
+            padding: 0 3px;
+            &:nth-child(n + 4) {
+              margin-top: 0;
+            }
+            &:nth-child(n + 3) {
+              margin-top: 6px;
+            }
+            .partner-info {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .team-container {
+      .all-team-photo {
+        width: 100%;
+        display: block;
+        margin-top: 55px;
+      }
+      .number-container {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        &:first-of-type {
+          margin-top: 30px;
+        }
+        .number {
+          line-height: 28px;
+          font-size: 20px;
+          flex: 0 0 20%;
+        }
+        .text {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .big-team {
+        margin-top: 50px;
+        & > .row > div {
+          &:not(:first-of-type) {
+            margin-top: 30px;
+          }
+        }
+        img {
+          width:100%;
+        }
+        .name {
+          margin-top: 15px;
+          font-size: 20px;
+          line-height: 28px;
+        }
+        .position, .description {
+          margin-top: 10px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .all-team-action {
+        display: none !important;
+      }
+      .all-team {
+        display: none;
+      }
+    }
+    .all-investors {
+      &-list {
+        &-item {
+          &:not(:first-of-type) {
+            margin-left: 0;
+          }
+          margin-top: 30px;
+          .investor-img-wrapper {
+            width: calc(100% / 6 * 4);
+            margin: 0 auto;
+            padding-bottom: 66.5%;
+          }
+          .investor-content-wrapper {
+            margin-top: 15px;
+            text-align: center;
+            .investor-position {
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+        }
+      }
+    }
+    .investors-container {
+      padding-top: 50px;
+      .investors-header-wrapper {
+        padding-top: 0;
+        .founds-raised {
+          .numbers-block {
+            margin-left: 20px;
+            &-value {
+              font-size: 20px;
+              line-height: 28px;
+            }
+            &-label {
+              font-size: 16px;
+              line-height: 22px;
+            }
+          }
+        }
+        .investors-countries {
+          margin-top: 30px;
+          &:last-of-type {
+            margin-top: 0;
+            display: block;
+          }
+        }
+        .investors-countries-wrapper {
+          margin-top: 0;
+          padding-top: 140px;
+          position: relative;
+          &::before {
+            content: "";
+            display: block;
+            background: url(/images/map.png) top 16px center no-repeat;
+            background-size: contain;
+            height: 50%;
+            width: 100%;
+            top: 0;
+            position: absolute;
+          }
+          & > div {
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ($desktop) {
+  .team-section {
+    .partners-container {
+      padding-top: 150px;
+    }
+    .advisors-container {
+      margin-top: 150px;
+    }
+    .investors-container {
+      .investors-header-wrapper {
+        min-height: 345px;
+        background: url(/images/map.png) no-repeat 98.5% center;
+        background-size: 589px;
+      }
+    }
+  }
+}

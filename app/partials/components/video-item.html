@@ -1,0 +1,21 @@
+<div class="col-md-3 col-xs-12 one-video">
+  <div class="why-rentberry__content-videos-list-item">
+    <div class="img" data-url="@video.videoUrl">
+      @if(index < 8) {
+        <img src="@video.imgUrl" srcset="@video.imgUrl2x" alt="@video.name">
+      }
+      @if(index >= 8) {
+        <img data-src="@video.imgUrl"
+             data-srcset="@video.imgUrl2x"
+             alt="@video.name">
+      }
+    </div>
+    <div class="content">
+      <div class="name">@video.name</div>
+      <div class="position">@video.position</div>
+      @if(video.company) {
+        <div class="company">@video.company</div>
+      }
+    </div>
+  </div>
+</div>

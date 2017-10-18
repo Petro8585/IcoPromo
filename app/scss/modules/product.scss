@@ -1,0 +1,322 @@
+.product {
+  position: relative;
+  background-image: linear-gradient(135deg, #FFFFFF 0%, #E9E6F7 100%);
+  padding-top: 50px;
+  overflow: hidden;
+
+  .flow {
+    margin-top: 20px;
+  }
+
+  & > .container {
+    position: relative;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      opacity: 0.19;
+      transform: rotate(-30deg);
+      background-image: linear-gradient(222deg, rgba(189, 175, 244, 0) 26%, rgba(111, 137, 233, .47) 100%);
+      border-radius: 100px;
+      width: 1322px;
+      height: 1322px;
+      z-index: 0;
+
+      @include size(desktop-md) {
+        width: 1000px;
+        height: 1000px;
+      }
+
+      @include size(desktop-sm) {
+        width: 900px;
+        height: 900px;
+      }
+    }
+
+    &::before {
+      bottom: 60%;
+      right: -67%;
+
+      @include size(desktop-md) {
+        bottom: 54%;
+        right: -48%;
+      }
+
+      @include size(desktop-sm) {
+        bottom: 50%;
+        right: -38%;
+      }
+    }
+
+    &::after {
+      bottom: 18%;
+      left: -22.5%;
+    }
+  }
+
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    &-header {
+      &-description {
+        max-width: 700px;
+        margin-top: 20px;
+      }
+    }
+
+    &-roadmap {
+      &-content {
+        .roadmap-tree {
+          position: relative;
+          padding-bottom: 50px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 4px;
+            height: 100%;
+            border-right: 2px solid $color-purple;
+          }
+
+          .year {
+            position: relative;
+            width: 100px;
+            height: 50px;
+            background-color: #FFF;
+            text-align: center;
+            line-height: 50px;
+            border: 2px solid $color-purple;
+            border-radius: 100px;
+            font-size: 24px;
+            font-weight: bold;
+          }
+
+          .roadmap-item {
+
+            &-card {
+              background: #FFF;
+              box-shadow: 0 8px 12px 0 rgba(50, 49, 58, .25);
+              border-radius: 6px;
+              display: inline-block;
+              position: relative;
+              text-align: left;
+              will-change: right, top, left, opacity;
+
+              .tree-connect {
+                position: absolute;
+                top: 30px;
+                border-bottom: 2px solid $color-purple;
+                will-change: width;
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  background: #FFF;
+                  border: 6px solid $color-purple;
+                  border-radius: 20px;
+                  box-sizing: border-box;
+                }
+
+                &::after {
+                  content: '';
+                  display: inline-block;
+                  position: absolute;
+                  width: 10px;
+                  height: 10px;
+                  background: #FFF;
+                  border: 2px solid $color-purple;
+                  border-radius: 10px;
+                  box-sizing: border-box;
+                }
+              }
+
+              .roadmap-item-title {
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: bold;
+              }
+
+              .roadmap-item-description {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 28px;
+      color: rgba($color-black, .7);
+    }
+  }
+}
+
+@media ($mobile) {
+  .product {
+    &__content {
+      &-roadmap {
+        margin-top: 50px;
+        &-header {
+          .roadmap-description {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 22px;
+          }
+          .roadmap-title {
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
+
+        &-content {
+          .roadmap-tree {
+            .year {
+              margin-bottom: 30px;
+              margin-left: auto;
+              margin-right: auto;
+              &:not(:first-of-type) {
+                margin-top: 50px;
+              }
+            }
+            .roadmap-item {
+              margin-top: 20px;
+              position: relative;
+
+              .tree-connect {
+                width: calc(100% / 12 - 5px) !important;
+                left: 5px;
+
+                &::before {
+                  right: -13px;
+                  top: -9px;
+                }
+
+                &::after {
+                  left: -5px;
+                  top: -4px;
+                }
+              }
+
+              &-card {
+                position: static;
+                padding: 20px 26px;
+                border-left: 6px solid $color-purple;
+                max-width: calc((100% / 12) * 11);
+                margin-left: calc(100% / 12);
+              }
+            }
+          }
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+@media ($desktop) {
+  .product {
+    padding-top: 150px;
+    &__content {
+      &-roadmap {
+        &-content {
+          .roadmap-tree {
+            margin-top: 100px;
+            &::before {
+              left: 50%;
+              transform: translateX(-50%);
+            }
+            .year {
+              margin-left: auto;
+              margin-right: auto;
+
+              &:not(:first-of-type) {
+                margin-top: -75px;
+                margin-bottom: 115px;
+              }
+
+              &:first-of-type {
+                margin-bottom: 150px;
+              }
+            }
+            .roadmap-item {
+              margin-top: - 75px;
+
+              &.left {
+                text-align: left;
+
+                .roadmap-item-card {
+                  border-right: 6px solid $color-purple;
+
+                  .tree-connect {
+                    left: calc(100% + 6px);
+
+                    &::before {
+                      left: -13px;
+                      top: -9px;
+                    }
+
+                    &::after {
+                      right: -5px;
+                      top: -4px;
+                    }
+                  }
+                }
+              }
+
+              &.right {
+                text-align: right;
+
+                .roadmap-item-card {
+                  border-left: 6px solid $color-purple;
+
+                  .tree-connect {
+                    top: 63px;
+                    right: calc(100% + 6px);
+
+                    &::before {
+                      right: -13px;
+                      top: -9px;
+                    }
+
+                    &::after {
+                      left: -5px;
+                      top: -4px;
+                    }
+                  }
+                }
+              }
+
+              .tree-connect {
+                width: 115px;
+              }
+
+              &-card {
+                padding: 50px;
+                max-width: calc(50% - 115px);
+                .roadmap-item-title {
+                  font-size: 24px;
+                  line-height: 28px;
+                }
+                .roadmap-item-description {
+                  margin-top: 28px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

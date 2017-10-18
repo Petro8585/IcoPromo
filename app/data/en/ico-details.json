@@ -1,0 +1,54 @@
+{
+  "title": "Token Sale",
+  "items": [
+    {
+      "title": "What is <br> Rentberry Token",
+      "description": "Rentberry Token is our proprietary cryptocurrency designed to create cross-border standards of rental process and keep all rental transactions as secure as possible."
+    },
+    {
+      "title": "Symbol",
+      "description": "BERRY"
+    },
+    {
+      "title": "Total Supply",
+      "description": "700,000,000 tokens"
+    },
+    {
+      "title": "Fixed Limit",
+      "description": "500,000 ETH"
+    },
+    {
+      "title": "Exchange",
+      "description": "1 ETH = 1,400 BERRY"
+    },
+    {
+      "title": "Currency",
+      "description": "ETH, BTC"
+    },
+    {
+      "title": "Starts",
+      "description": "November 20th (9AM EST, 1PM GMT, 9PM HKT)"
+    }
+  ],
+  "bonus": {
+    "title": "Bonus",
+    "items": [
+      {
+        "title": "First 24h",
+        "id": "day-1-2"
+      },
+      {
+        "title": "Day 2-3",
+        "id": "day-2-5"
+      },
+      {
+        "title":  "Day 3-5",
+        "id": "day-5-10"
+      },
+      {
+        "title": "Day 5-10",
+        "id": "day-10-30"
+      }
+    ]
+  }
+}

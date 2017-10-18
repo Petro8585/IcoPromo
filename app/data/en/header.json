@@ -1,0 +1,12 @@
+{
+  "menu": {
+    "about": "About",
+    "icoDetails": "Token Sale",
+    "whitepaper": "Whitepaper",
+    "product": "Roadmap",
+    "whyRentberry": "Why Rentberry",
+    "team": "Team"
+  },
+  "stayUpdated": "Register Now",
+  "langs": ["en", "zh", "ja", "ko", "ru", "es"]
+}

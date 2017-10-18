@@ -1,0 +1,219 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background .3s ease;
+  z-index: 100;
+
+  &.scroll-header {
+    background: $color-purpleLight;
+  }
+
+  .logo-wrapper {
+    font-size: 0;
+    .logo {
+      margin-top: -6px;
+      display: inline-block;
+    }
+  }
+
+  .nav {
+    height: 80px;
+    text-align: center;
+    position: relative;
+    .links-wrapper {
+      font-size: 0;
+    }
+    .marker {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      background-color: $color-orange;
+      width: 50px;
+      transition: .3s ease;
+      display: none;
+    }
+
+    .links-wrapper {
+      a {
+        font-size: 20px;
+        display: inline-block;
+        height: 80px;
+        line-height: 80px;
+        color: $color-white;
+        text-align: center;
+        overflow: hidden;
+        border-bottom: 4px solid transparent;
+        transition: .3s ease;
+
+        &::after {
+          display: block;
+          content: attr(title);
+          font-weight: bold;
+          height: 1px;
+          color: transparent;
+          overflow: hidden;
+          visibility: hidden;
+          margin-bottom: -1px;
+        }
+
+        &:hover {
+          border-color: $color-orange;
+        }
+
+        &.active {
+          font-weight: bold;
+        }
+
+        & + a {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+
+  .stay-updated-wrapper {
+    text-align: right;
+    min-width: 230px;
+  }
+
+  .languages-dropdown {
+    display: inline-block;
+    margin-right: 35px;
+    position: relative;
+    font-size: 20px;
+    line-height: 28px;
+
+    .current-language {
+      position: relative;
+      cursor: pointer;
+      padding-right: 20px;
+      user-select: none;
+      text-transform: capitalize;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-4px);
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-top: 8px solid $color-white;
+      }
+    }
+
+    .languages-list {
+      position: absolute;
+      top: calc(100% + 10px);
+      background-color: $color-white;
+      display: none;
+      text-align: left;
+      padding: 8px 0;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+      min-width: 80px;
+      .languages-list-item {
+        display: block;
+        height: 48px;
+        padding: 0 16px;
+        font-size: 20px;
+        line-height: 48px;
+        text-transform: capitalize;
+        color: $color-black;
+        &.active {
+          color: $purple-active;
+        }
+      }
+    }
+  }
+
+  .stay-updated-btn {
+    background: $color-green;
+    box-shadow: 0 14px 24px 0 rgba(50, 49, 58, .25);
+    border-radius: 3px;
+    color: $color-white;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    padding: 9px 15px;
+    &:hover {
+      background: $green-hover;
+    }
+    &:active {
+      background: $green-pressed;
+    }
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    margin: -10px -10px -10px 0;
+    background: url(/images/menu-toggle.svg) no-repeat center;
+  }
+}
+
+@media ($mobile) {
+  header {
+    padding: 26px 20px 20px !important;
+    transition: background .3s ease, padding-top .3s ease, padding-bottom .3s ease;
+    &.scroll-header {
+      padding: 15px 20px 9px !important;
+    }
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(57, 38, 91, .95);
+      display: none;
+      overflow: auto;
+      &.opened {
+        display: flex;
+        flex-direction: column;
+      }
+      .mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        .menu-close {
+          width: 40px;
+          height: 40px;
+          margin: -7px -15px -10px 0;
+          background: url(/images/menu-close.svg) no-repeat center;
+        }
+      }
+      .links-wrapper {
+        flex-grow: 1;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a {
+          margin: 0 !important;
+          line-height: 28px;
+          height: auto;
+          border: none;
+          user-select: none;
+          padding: 5px 0;
+          outline: none !important;
+          & + a {
+            margin-top: 10px !important;
+          }
+          &.active {
+            color: $color-orange-text;
+          }
+        }
+      }
+      .mobile-menu-action {
+        padding: 30px 0;
+      }
+    }
+  }
+}

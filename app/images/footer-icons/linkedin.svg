@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing" transform="translate(-426.000000, -12758.000000)" fill="#FFFFFF">
+            <g id="Contacts" transform="translate(-275.000000, 12338.000000)">
+                <g id="linkedin" transform="translate(701.000000, 420.000000)">
+                    <path d="M27.264,27.27 L22.524,27.27 L22.524,19.844 C22.524,18.072 22.488,15.794 20.056,15.794 C17.586,15.794 17.208,17.722 17.208,19.714 L17.208,27.27 L12.468,27.27 L12.468,12 L17.02,12 L17.02,14.08 L17.08,14.08 C17.716,12.88 19.264,11.614 21.574,11.614 C26.374,11.614 27.264,14.774 27.264,18.888 L27.264,27.264 L27.264,27.27 Z M7.116,9.91 C5.592,9.91 4.364,8.676 4.364,7.156 C4.364,5.64 5.592,4.406 7.116,4.406 C8.636,4.406 9.868,5.64 9.868,7.156 C9.868,8.676 8.634,9.91 7.116,9.91 Z M9.492,27.27 L4.74,27.27 L4.74,12 L9.492,12 L9.492,27.27 L9.492,27.27 Z M29.632,0 L2.36,0 C1.056,0 0,1.032 0,2.306 L0,29.694 C0,30.968 1.056,32 2.36,32 L29.63,32 C30.934,32 32,30.968 32,29.694 L32,2.306 C32,1.032 30.934,0 29.63,0 L29.632,0 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

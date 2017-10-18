@@ -1,0 +1,214 @@
+.subscription-wrapper {
+  background: $lighter-background;
+  padding: 70px 0;
+  text-align: center;
+  height: 290px;
+  position: relative;
+
+  &.show-result {
+    .result-container {
+      opacity: 1;
+      height: auto;
+      pointer-events: auto;
+    }
+    .form-wrapper {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .result-container {
+    transition: opacity .2s ease-out;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    max-width: inherit;
+  }
+  .form-wrapper {
+    transition: opacity .2s ease-out;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .description {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #A09DB9;
+  }
+  .form-container {
+    position: relative;
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 0 14px 24px rgba(50, 49, 58, .25);
+      border-radius: 6px 6px 8px 8px;
+      width: calc(100% - 20px);
+      height: 100%;
+    }
+    form {
+      position: relative;
+      .form-error {
+        text-align: left;
+        padding-left: 30px;
+        margin-top: 15px;
+      }
+    }
+    .controls {
+      &.has-error {
+        input {
+          border-color: $color-red;
+          &::-webkit-input-placeholder {
+            color: $color-red;
+          }
+          &:-moz-placeholder {
+            color: $color-red;
+          }
+          &::-moz-placeholder {
+            color: $color-red;
+          }
+          &:-ms-input-placeholder {
+            color: $color-red;
+          }
+        }
+      }
+      input {
+        padding: 15px;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 6px 6px 0 0;
+        background: #fff;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        -webkit-text-fill-color: rgb(0, 0, 0);
+
+        &::-webkit-input-placeholder {
+          color: #A09DB9;
+          -webkit-text-fill-color: #A09DB9;
+          transition: .2s ease-out;
+        }
+        &:-moz-placeholder {
+          color: #A09DB9;
+          -webkit-text-fill-color: #A09DB9;
+          transition: .2s ease-out;
+        }
+        &::-moz-placeholder {
+          color: #A09DB9;
+          -webkit-text-fill-color: #A09DB9;
+          transition: .2s ease-out;
+        }
+        &:-ms-input-placeholder {
+          color: #A09DB9;
+          -webkit-text-fill-color: #A09DB9;
+          transition: .2s ease-out;
+        }
+
+        &:focus {
+          &::-webkit-input-placeholder {
+            color: transparent;
+          }
+          &:-moz-placeholder {
+            color: transparent;
+          }
+          &::-moz-placeholder {
+            color: transparent;
+          }
+          &:-ms-input-placeholder {
+            color: transparent;
+          }
+        }
+      }
+    }
+    button {
+      border-radius: 0 0 8px 8px;
+      height: 50px;
+      float: left;
+      color: #fff;
+      font-weight: bold;
+      background: $color-purpleDark;
+      font-size: 16px;
+      width: 100%;
+      &:hover {
+        background: $purple-hover;
+      }
+      &:active {
+        background: $purple-pressed;
+      }
+    }
+  }
+}
+
+@media ($mobile) {
+  .subscription-wrapper {
+    padding: 50px 0;
+    .title {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .description {
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 0;
+    }
+    .form-container {
+      margin-top: 20px;
+      form {
+        .form-error {
+          font-size: 14px;
+          line-height: 22px;
+          position: absolute;
+          bottom: -95px;
+          padding-left: 0;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media ($desktop) {
+  .subscription-wrapper {
+    height: 336px;
+    .form-container {
+      width: 640px;
+      margin: 30px auto 0;
+      &:before {
+        border-radius: 6px 8px 8px 6px;
+        width: calc(100% - 20px);
+        height: 70px;
+      }
+      .controls {
+        width: 400px;
+        float: left;
+        input {
+          height: 70px;
+          font-size: 20px;
+          padding: 20px 30px;
+          border-radius: 6px 0 0 6px;
+        }
+      }
+      button {
+        border-radius: 0 8px 8px 0;
+        width: 220px;
+        height: 70px;
+        font-size: 24px;
+      }
+    }
+  }
+}

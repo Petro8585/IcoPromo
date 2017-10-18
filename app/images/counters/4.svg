@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#32BDE3" offset="0%"></stop>
+            <stop stop-color="#3DADE0" offset="21.223294%"></stop>
+            <stop stop-color="#6574D7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-2">
+            <stop stop-color="#32BDE3" offset="0%"></stop>
+            <stop stop-color="#6574D7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1">
+            <path d="M70,35 C70,54.33 54.33,70 35,70 C15.67,70 0,54.33 0,35 C0,15.67 15.67,0 35,0 C54.33,0 70,15.67 70,35" id="Fill-1"></path>
+            <path d="M29.5571,40.0254 C30.9541,39.1354 31.3661,37.2814 30.4761,35.8834 C29.5861,34.4854 27.7331,34.0734 26.3341,34.9644 L3.2271,49.6774 C4.0731,51.5074 5.0711,53.2504 6.2081,54.8924 L29.5571,40.0254 Z" id="Fill-3" fill="#548CDB"></path>
+            <path d="M36.5391,50.9912 C37.9361,50.1012 38.3491,48.2472 37.4581,46.8492 C36.5691,45.4522 34.7131,45.0402 33.3161,45.9302 L10.7971,60.2692 C12.3241,61.7312 13.9801,63.0582 15.7511,64.2272 L36.5391,50.9912 Z" id="Fill-5" fill="#479EDE"></path>
+            <path d="M43.5215,61.957 C44.9185,61.067 45.3315,59.213 44.4405,57.815 C43.5515,56.418 41.6955,56.005 40.2985,56.896 L23.0235,67.896 C25.6235,68.843 28.3685,69.487 31.2145,69.793 L43.5215,61.957 Z" id="Fill-7" fill="#3CAFE1"></path>
+            <g id="Group-11" transform="translate(0.000000, 13.000000)" fill="url(#linearGradient-2)">
+                <path d="M0.3198,26.6732 L31.0868,7.0842 C31.2738,6.9652 31.4618,6.9312 31.6128,6.9312 C31.7038,6.9312 31.7818,6.9432 31.8388,6.9562 C31.9908,6.9902 32.2768,7.0922 32.4658,7.3902 L58.3598,48.0572 C59.8998,46.6762 61.3118,45.1572 62.5868,43.5262 L37.5278,4.1682 C36.5258,2.5952 34.9668,1.5052 33.1388,1.0982 C31.3088,0.6922 29.4368,1.0212 27.8638,2.0232 L0.0828,19.7122 C0.0338,20.4692 -0.0002,21.2302 -0.0002,22.0002 C-0.0002,23.5852 0.1158,25.1432 0.3198,26.6732" id="Fill-9"></path>
+            </g>
+        </g>
+    </g>
+</svg>

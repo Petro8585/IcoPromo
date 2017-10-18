@@ -1,0 +1,40 @@
+/*
+TODO ::
+[] Integrate Bourbon to make use of most mixins - http://bourbon.io/docs/
+*/
+/*-------------------------------------------------
+ MIXIN :: CLEARFIX
+-------------------------------------------------*/
+@mixin clearfix() {
+  clear: both;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/*-------------------------------------------------
+ MIXIN :: PIXEL TO EM CONVERTOR
+-------------------------------------------------*/
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+
+$size-desktop-sm: 1439px;
+$size-desktop-lg: 1600px;
+
+@mixin size($media) {
+  @if $media == desktop-sm {
+    @media (max-width: $size-desktop-sm) { @content; }
+  } @else if $media == desktop-md {
+    @media (min-width: $size-desktop-sm + 1) and (max-width: $size-desktop-lg - 1) { @content; }
+  } @else if $media == desktop-lg {
+    @media (min-width: $size-desktop-lg) { @content; }
+  }
+}

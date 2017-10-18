@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#32BDE3" offset="0%"></stop>
+            <stop stop-color="#6574D7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1">
+            <path d="M70,35 C70,54.33 54.33,70 35,70 C15.67,70 0,54.33 0,35 C0,15.67 15.67,0 35,0 C54.33,0 70,15.67 70,35" id="Fill-1"></path>
+            <path d="M22,33.0021 C22,25.8341 27.832,20.0021 35,20.0021 C42.168,20.0021 48,25.8341 48,33.0021 C48,40.1701 42.168,46.0021 35,46.0021 C27.832,46.0021 22,40.1701 22,33.0021 M13.242,62.4051 C18.38,56.0651 26.223,52.0021 35,52.0021 C43.777,52.0021 51.62,56.0651 56.758,62.4051 C58.331,61.1541 59.795,59.7741 61.131,58.2751 C57.306,53.6841 52.297,50.1121 46.576,48.0341 C51.081,44.5561 54,39.1201 54,33.0021 C54,22.5251 45.477,14.0021 35,14.0021 C24.523,14.0021 16,22.5251 16,33.0021 C16,39.1201 18.919,44.5561 23.424,48.0341 C17.703,50.1121 12.694,53.6841 8.869,58.2751 C10.205,59.7741 11.669,61.1541 13.242,62.4051" id="Fill-3" fill="url(#linearGradient-1)"></path>
+        </g>
+    </g>
+</svg>

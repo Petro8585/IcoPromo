@@ -1,0 +1,23 @@
+{
+  "name": "rentberry-ico",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "*",
+    "flexboxgrid": "^6.3.2",
+    "normalize-css": "^7.0.0",
+    "reset-css": "^2.2.1",
+    "jquery-circle-progress": "^1.2.2",
+    "izimodal": "^1.5.0",
+    "jquery-form-validator": "^2.3.77",
+    "inputmask": "^3.3.8",
+    "url": "*"
+  },
+  "devDependencies": {},
+  "overrides": {
+    "inputmask": {
+      "main": [
+        "./dist/jquery.inputmask.bundle.js"
+      ]
+    }
+  }
+}

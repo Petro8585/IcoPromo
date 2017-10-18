@@ -1,0 +1,95 @@
+<div id="stayUpdated" class="modal">
+  <div class="close-modal" data-izimodal-close>
+    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+      <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Button-Close" sketch:type="MSLayerGroup" transform="translate(-15.000000, -15.000000)" fill="#7B53C1">
+          <path d="M24,24 L13,24 L13,26 L24,26 L24,37 L26,37 L26,26 L37,26 L37,24 L26,24 L26,13 L24,13 L24,24 Z"
+                id="Rectangle-29" sketch:type="MSShapeGroup"
+                transform="translate(25.000000, 25.000000) rotate(-45.000000) translate(-25.000000, -25.000000) "></path>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div class="container form-container">
+    <div class="form-content">
+      <div class="row middle-md">
+
+        <div class="col-md-5 col-xs-10 col-xs-offset-1">
+          <!--<div class="counters">-->
+          <!--<span class="counter-value" id="participants" data-placeholder=""></span> participants from-->
+          <!--<span class="counter-value" id="countries" data-placeholder=""></span> countries subscribed with-->
+          <!--<span class="counter-value" id="money" data-placeholder=""></span>-->
+          <!--</div>-->
+          <div class="title">
+            It’s important for us to understand who will become the part of our ecosystem
+          </div>
+          <div class="description">
+            Please note that you will need to verify your email address. We will use it to provide further instructions
+            for the event. Please ensure the email you enter belongs to you and is readily accessible.
+          </div>
+        </div>
+
+        <div class="col-md-4 col-xs-10 col-xs-offset-1">
+          <form novalidate="" id="registrationForm">
+            <div class="server-error">Oops, can’t connect to the server :(</div>
+
+            <div class="controls">
+              <input type="text" data-validation="length" data-validation-length="min1" placeholder="First name" required
+                     name="nameFirst">
+            </div>
+
+            <div class="controls">
+              <input type="text" data-validation="length" data-validation-length="min1" placeholder="Last name" required
+                     name="nameLast">
+            </div>
+
+            <div class="controls">
+              <input type="text" data-validation="email" placeholder="Email" required name="username">
+            </div>
+
+            <div class="controls">
+              <input
+                type="text"
+                data-validation="number"
+                data-validation-allowing="range[1;9999999]"
+                class="currency"
+                placeholder="Participation Amount ($)"
+                required
+                name="amount">
+            </div>
+
+            <p>
+              Please enter the amount in USD that you would like to <br/>
+              participate with. It is not a commitment.
+            </p>
+
+            <div class="checkbox-container controls">
+              <input type="checkbox" class="checkbox" data-validation="required" required id="agree"/>
+              <label for="agree">I agree to <a href="#"><b>Terms & Conditions</b></a></label>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container result-container">
+    <div class="row">
+      <div class="col-xs-10 col-md-12 col-xs-offset-1 col-md-offset-0">
+        <div class="title">
+          Please Verify Your Email Address
+          <p>
+            Check <a href="mailto:" id="username"></a> to complete your registration <br/>
+            for the Rentberry Token Pre-Sale Event.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <button data-izimodal-close>Done</button>
+      </div>
+    </div>
+  </div>
+</div>
