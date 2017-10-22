@@ -1,10 +1,16 @@
 <section class="ico-about" id="about" data-order="1">
 
-  <div class="press-logos desktop-only">
+  <div class="press-logos">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-xs col-md-offset-1">
+        <div class="col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
           <ul>
+            <li>
+              <a target="_blank"
+                 href="http://www.forbeschina.com/review/201710/0065882.shtml"
+                 class="one-logo one-logo-forbes">
+              </a>
+            </li>
             <li>
               <a target="_blank"
                  href="https://www.wsj.com/articles/want-that-apartment-you-may-have-to-bid-for-it-1491134407"
@@ -13,20 +19,27 @@
             </li>
             <li>
               <a target="_blank"
-                 href="https://www.digitaltrends.com/home/landlords-auctioning-apartments-online/#:P9TBFH3UVJalOA"
-                 class="one-logo one-logo-digital">
-              </a>
-            </li>
-            <li>
-              <a target="_blank"
-                 href="http://www.wtsp.com/news/local/new-website-lets-you-bid-on-your-rent/430080441"
-                 class="one-logo one-logo-10news">
+                 href="http://www.fox5vegas.com/story/36591372/rentberry-announces-decentralized-long-term-rental-platform-at-block-con"
+                 class="one-logo one-logo-fox5">
               </a>
             </li>
             <li>
               <a target="_blank"
                  href="http://www.pressheretv.com/bid-on-your-next-apartment/"
                  class="one-logo one-logo-nbc">
+              </a>
+            </li>
+            <li class="mobile-only divider"></li>
+            <li>
+              <a target="_blank"
+                 href="http://www.bbc.com/news/technology-39355984"
+                 class="one-logo one-logo-bbc">
+              </a>
+            </li>
+            <li>
+              <a target="_blank"
+                 href="http://abc7news.com/video/embed/?pid=2496273"
+                 class="one-logo one-logo-abc">
               </a>
             </li>
             <li>
@@ -47,11 +60,26 @@
         <div class="col-md-6 col-xs-10 col-xs-offset-1 col-md-offset-0">
           <div class="section-header">@about.title</div>
         </div>
-        <!--<div class="col-md-6 col-xs-10 col-xs-offset-1 col-md-offset-0">-->
-        <!--<p class="light-gray-color">@about.description</p>-->
-        <!--</div>-->
       </div>
-
+    </div>
+    <div class="about__description-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-xs-10 col-xs-offset-1 col-md-offset-0 last-md">
+            <p>
+              Rentberry is a fully operational long-term rental platform that leverages blockchain infrastructure to ensure seamless rental experience and allows for crowdsourcing to help tenants save billions in rental security deposits.
+            </p>
+            <a class="link-btn" target="_blank" href="https://rentberry.com">
+              rentberry.com
+            </a>
+          </div>
+          <div class="col-md-7 col-xs-10 col-xs-offset-1 col-md-offset-0">
+            <img src="/images/about_description.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
       <div class="about-list" id="about-list">
         <div class="row">
           @for (var i = 0; i < about.items.length; i++) {
@@ -91,7 +119,10 @@
           </div>
           <div class="col-md-5 col-md-offset-1 col-xs-offset-1 col-xs-10">
             <div class="our-mission-img" data-url="@about.ourMission.videoUrl">
-              <img src="@about.ourMission.imgUrl" srcset="@about.ourMission.imgUrl2x" alt="@about.ourMission.title">
+              <img src="@about.ourMission.imgUrl"
+                   srcset="@about.ourMission.imgUrl2x"
+                   alt="@about.ourMission.title"
+                   class="video-preview">
             </div>
           </div>
         </div>

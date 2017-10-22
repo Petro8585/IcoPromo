@@ -61,6 +61,7 @@ b {
   font-size: 20px;
   line-height: 28px;
   margin-top: 20px;
+  color: $color-blackLight;
 }
 .white-block {
   color: $color-white;
@@ -73,6 +74,9 @@ b {
 }
 .text-center {
   text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 .light-gray-color {
   color: $light-gray;

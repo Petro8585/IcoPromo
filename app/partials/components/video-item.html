@@ -2,12 +2,16 @@
   <div class="why-rentberry__content-videos-list-item">
     <div class="img" data-url="@video.videoUrl">
       @if(index < 8) {
-        <img src="@video.imgUrl" srcset="@video.imgUrl2x" alt="@video.name">
+        <img src="@video.imgUrl"
+             srcset="@video.imgUrl2x"
+             alt="@video.name"
+             class="video-preview">
       }
       @if(index >= 8) {
         <img data-src="@video.imgUrl"
              data-srcset="@video.imgUrl2x"
-             alt="@video.name">
+             alt="@video.name"
+             class="video-preview">
       }
     </div>
     <div class="content">

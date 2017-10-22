@@ -1,5 +1,14 @@
 'use strict'
 
+/**
+ * ScrollTop
+ *
+ * Main usage:
+ *  new ScrollTop(selector)
+ *
+ * @param selector - element selector
+ * @constructor
+ */
 var ScrollTop = function (selector) {
   this.el = $(selector)
 

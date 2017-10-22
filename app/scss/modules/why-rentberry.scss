@@ -1,59 +1,3 @@
-//@keyframes window-why1 {
-//  0% {
-//    fill: #FF9CA5;
-//  }
-//
-//  50% {
-//    fill: #fffc87;
-//  }
-//
-//  100% {
-//    fill: #FF9CA5;
-//  }
-//}
-//
-//@keyframes window-why2 {
-//  0% {
-//    fill: #FF9CA5;
-//  }
-//
-//  50% {
-//    fill: #fffc87;
-//  }
-//
-//  100% {
-//    fill: #FF9CA5;
-//  }
-//}
-//
-//@keyframes window-why3 {
-//  0% {
-//    fill: #FF9CA5;
-//  }
-//
-//  50% {
-//    fill: #fffc87;
-//  }
-//
-//  100% {
-//    fill: #FF9CA5;
-//  }
-//}
-//
-//@keyframes window-why4 {
-//  0% {
-//    fill: #FF9CA5;
-//  }
-//
-//  50% {
-//    fill: #fffc87;
-//  }
-//
-//  100% {
-//    fill: #FF9CA5;
-//  }
-//}
-
 .why-rentberry {
   position: relative;
 
@@ -144,6 +88,7 @@
               width: 80px;
               height: 80px;
               background: url(/images/button-play.svg) no-repeat center center;
+              pointer-events: none;
             }
 
             img {
@@ -327,7 +272,7 @@
         }
         &.closed {
           .why-rentberry__content-videos-list {
-            -webkit-mask-image: linear-gradient(to top, rgba(255,255,255,0) 2%,rgba(255,255,255,1) 18%);
+            -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 2%, rgba(255, 255, 255, 1) 18%);
 
           }
           .one-video {
@@ -414,7 +359,7 @@
         }
         &.closed {
           .why-rentberry__content-videos-list {
-            -webkit-mask-image: linear-gradient(to top, rgba(255,255,255,0) 2%,rgba(255,255,255,1) 30%);
+            -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 2%, rgba(255, 255, 255, 1) 30%);
             height: 517px;
             &::after {
               display: block;

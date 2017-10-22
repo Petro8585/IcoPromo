@@ -1,4 +1,3 @@
-
 'use strict'
 
 $('#emailVerified').iziModal({
@@ -16,14 +15,15 @@ $('#emailVerified').iziModal({
   }
 })
 
-if (window.url.registration === 'true'){
-  history.pushState(null, null, "https://ico.rentberry.com")
+if (window.url.registration === 'true') {
+  history.pushState(null, null, '/')
   $('#stayUpdated').iziModal('open')
-} else if (window.url.verification) {
+}
+else if (window.url.verification) {
   var onSuccess = function () {
     $('#emailVerified').iziModal('open')
 
-    history.pushState(null, null, "https://ico.rentberry.com")
+    history.pushState(null, null, '/')
   }
   var onError = function () {
     console.log('ERROR verify')

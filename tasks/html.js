@@ -37,7 +37,8 @@ gulp.task('html', function () {
         about: getData('about.json'),
         icoDetails: getData('ico-details.json'),
         whitepaper: getData('whitepaper.json'),
-        partners: getData('partners.json')
+        partners: getData('partners.json'),
+        roadshow: getData('roadshow.json')
       }
     }))
     .pipe(gulpIf(config.production, revUrls(config.urlOptions)))

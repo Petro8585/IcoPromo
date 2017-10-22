@@ -1,5 +1,16 @@
 'use strict'
 
+/**
+ * MobileMenu
+ *
+ * Main usage:
+ *  new MobileMenu(openEl, closeEl, menuEl)
+ *
+ * @param openEl - element selector
+ * @param closeEl - element selector
+ * @param menuEl - element selector
+ * @constructor
+ */
 var MobileMenu = function (openEl, closeEl, menuEl) {
   this.openEl = $(openEl)
   this.closeEl = $(closeEl)
@@ -12,13 +23,15 @@ var MobileMenu = function (openEl, closeEl, menuEl) {
 }
 
 MobileMenu.prototype = {
+
   openMenu: function () {
     this.openEl.fadeOut(200)
     this.menuEl.addClass('opened').fadeIn(200)
     $('body')
       .addClass('stop-scrolling')
-      .bind('touchmove', function(e){e.preventDefault()})
+      .bind('touchmove', function (e) {e.preventDefault()})
   },
+
   closeMenu: function () {
     this.menuEl.fadeOut(200)
     this.openEl.removeClass('opened').fadeIn(200)
@@ -26,14 +39,16 @@ MobileMenu.prototype = {
       .removeClass('stop-scrolling')
       .unbind('touchmove')
   },
+
   init: function () {
     isMobile(function (mobile) {
-      if(mobile) {
+      if (mobile) {
         this.openEl.show()
         this.menuEl.removeClass('opened').hide()
         this.openEl.bind('click', this.openMenu)
         this.closeEl.bind('click', this.closeMenu)
-      } else {
+      }
+      else {
         this.openEl.hide()
         this.menuEl.show()
         $('body')

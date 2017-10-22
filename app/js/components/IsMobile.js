@@ -1,5 +1,12 @@
 'use strict'
 
+/**
+ * isMobile - singleton to receive current device resolution
+ *
+ * Main usage:
+ *  var subscription = dataLoader(cb) - cb will be called when device resolution changes
+ *  subscription.unsubscribe() - to unsubscribe from updates
+ */
 var isMobile = (function () {
   var listeners = []
   var nextId = 0
@@ -17,6 +24,12 @@ var isMobile = (function () {
     }
   })
 
+  /**
+   * Subscription
+   *
+   * @param cb - function
+   * @constructor
+   */
   var Subscription = function (cb) {
     this.id = ++nextId
     this.cb = cb

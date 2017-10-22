@@ -5,11 +5,11 @@ header {
   right: 0;
   transition: background .3s ease;
   z-index: 100;
-
+  
   &.scroll-header {
     background: $color-purpleLight;
   }
-
+  
   .logo-wrapper {
     font-size: 0;
     .logo {
@@ -17,7 +17,7 @@ header {
       display: inline-block;
     }
   }
-
+  
   .nav {
     height: 80px;
     text-align: center;
@@ -35,7 +35,7 @@ header {
       transition: .3s ease;
       display: none;
     }
-
+    
     .links-wrapper {
       a {
         font-size: 20px;
@@ -47,7 +47,7 @@ header {
         overflow: hidden;
         border-bottom: 4px solid transparent;
         transition: .3s ease;
-
+        
         &::after {
           display: block;
           content: attr(title);
@@ -58,41 +58,80 @@ header {
           visibility: hidden;
           margin-bottom: -1px;
         }
-
+        
         &:hover {
           border-color: $color-orange;
         }
-
+        
         &.active {
           font-weight: bold;
         }
-
+        
         & + a {
           margin-left: 30px;
         }
       }
     }
   }
-
+  
   .stay-updated-wrapper {
     text-align: right;
-    min-width: 230px;
+    min-width: 260px;
   }
-
+  
+  .header-icons {
+    display: inline-block;
+    vertical-align: middle;
+    a {
+      margin-right: 20px;
+      height: 32px;
+      width: 32px;
+      border: none;
+      position: relative;
+      display: inline-block;
+      transition: .2s ease-out;
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        display: block;
+        content: '';
+        transform: translateY(-50%);
+      }
+      &:hover {
+        &:not(.no-link) {
+          transform: scale(1.1);
+        }
+      }
+      &.bitcoin {
+        &:before {
+          background: url("/images/footer-icons/bitcoin.svg") center no-repeat;
+        }
+      }
+      &.telegram {
+        &:before {
+          background: url("/images/footer-icons/telegram.svg") center no-repeat;
+        }
+      }
+    }
+  }
+  
   .languages-dropdown {
     display: inline-block;
     margin-right: 35px;
     position: relative;
     font-size: 20px;
     line-height: 28px;
-
+    
     .current-language {
       position: relative;
       cursor: pointer;
       padding-right: 20px;
       user-select: none;
       text-transform: capitalize;
-
+      
       &::after {
         content: "";
         display: inline-block;
@@ -106,7 +145,7 @@ header {
         border-top: 8px solid $color-white;
       }
     }
-
+    
     .languages-list {
       position: absolute;
       top: calc(100% + 10px);
@@ -130,7 +169,7 @@ header {
       }
     }
   }
-
+  
   .stay-updated-btn {
     background: $color-green;
     box-shadow: 0 14px 24px 0 rgba(50, 49, 58, .25);
@@ -147,7 +186,7 @@ header {
       background: $green-pressed;
     }
   }
-
+  
   .menu-toggle {
     width: 40px;
     height: 40px;

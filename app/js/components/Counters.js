@@ -1,4 +1,16 @@
 'use strict'
+
+/**
+ * Counters
+ *
+ * Main usage:
+ *  new Counters(participantsSelector, countriesSelector, moneySelector)
+ *
+ * @param participantsSelector - element selector
+ * @param countriesSelector - element selector
+ * @param moneySelector - element selector
+ * @constructor
+ */
 var Counters = function (participantsSelector, countriesSelector, moneySelector) {
   this.participantsEl = $(participantsSelector)
   this.countriesEl = $(countriesSelector)
@@ -7,9 +19,20 @@ var Counters = function (participantsSelector, countriesSelector, moneySelector)
 }
 
 Counters.prototype = {
+
+  /**
+   * @param value - number | string
+   * @returns {string}
+   */
   createPlaceholder: function (value) {
     return value.toString().replace(/[0-9]/g, '9')
   },
+
+  /**
+   * @param el - elementRef
+   * @param value - number
+   * @param before - ?string
+   */
   updateEl: function (el, value, before) {
     var formatted = formatNumber(value)
     var placeholder = this.createPlaceholder(value)
@@ -18,6 +41,7 @@ Counters.prototype = {
     el.text(before + formatted)
     el.attr('data-placeholder', before + formattedPlaceholder)
   },
+
   init: function () {
     var updateData = function (data) {
       if(!this.prevData || this.prevData.participants !== data.participants) {

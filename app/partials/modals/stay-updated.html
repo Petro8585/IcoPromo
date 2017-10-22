@@ -1,26 +1,16 @@
 <div id="stayUpdated" class="modal">
-  <div class="close-modal" data-izimodal-close>
-    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-      <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Button-Close" sketch:type="MSLayerGroup" transform="translate(-15.000000, -15.000000)" fill="#7B53C1">
-          <path d="M24,24 L13,24 L13,26 L24,26 L24,37 L26,37 L26,26 L37,26 L37,24 L26,24 L26,13 L24,13 L24,24 Z"
-                id="Rectangle-29" sketch:type="MSShapeGroup"
-                transform="translate(25.000000, 25.000000) rotate(-45.000000) translate(-25.000000, -25.000000) "></path>
-        </g>
-      </g>
-    </svg>
-  </div>
+  @include('../components/close-modal.html')
+
   <div class="container form-container">
     <div class="form-content">
       <div class="row middle-md">
 
         <div class="col-md-5 col-xs-10 col-xs-offset-1">
-          <!--<div class="counters">-->
-          <!--<span class="counter-value" id="participants" data-placeholder=""></span> participants from-->
-          <!--<span class="counter-value" id="countries" data-placeholder=""></span> countries subscribed with-->
-          <!--<span class="counter-value" id="money" data-placeholder=""></span>-->
-          <!--</div>-->
+          <div class="counters">
+            <span class="counter-value" id="participants" data-placeholder=""></span> participants from
+            <span class="counter-value" id="countries" data-placeholder=""></span> countries subscribed with
+            <span class="counter-value" id="money" data-placeholder=""></span>
+          </div>
           <div class="title">
             It’s important for us to understand who will become the part of our ecosystem
           </div>
@@ -35,22 +25,21 @@
             <div class="server-error">Oops, can’t connect to the server :(</div>
 
             <div class="controls">
-              <input type="text" data-validation="length" data-validation-length="min1" placeholder="First name" required
+              <input data-validation="length" data-validation-length="min1" placeholder="First name" required
                      name="nameFirst">
             </div>
 
             <div class="controls">
-              <input type="text" data-validation="length" data-validation-length="min1" placeholder="Last name" required
+              <input data-validation="length" data-validation-length="min1" placeholder="Last name" required
                      name="nameLast">
             </div>
 
             <div class="controls">
-              <input type="text" data-validation="email" placeholder="Email" required name="username">
+              <input data-validation="email" placeholder="Email" required name="username">
             </div>
 
             <div class="controls">
               <input
-                type="text"
                 data-validation="number"
                 data-validation-allowing="range[1;9999999]"
                 class="currency"
@@ -69,7 +58,7 @@
               <label for="agree">I agree to <a href="#"><b>Terms & Conditions</b></a></label>
             </div>
 
-            <button type="submit">Submit</button>
+            <button>Submit</button>
           </form>
         </div>
       </div>

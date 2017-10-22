@@ -1,0 +1,7 @@
+<div class="roadshow-events city-@cityItem.id @if(index == 2) {active}">
+  <div class="row">
+    @for(var i = 0; i < cityItem.events.length; i++) {
+      @include("./roadshow-event.html", {"event": `+JSON.stringify(cityItem.events[i])+`, "index": `+i+`})
+    }
+  </div>
+</div>

@@ -1,51 +1,3 @@
-//
-//@keyframes bird {
-//  0% {
-//    transform: translate(0, 0);
-//  }
-//
-//  10% {
-//    transform: translate(150px, 115px);
-//  }
-//
-//  20% {
-//    transform: translate(270px, 50px);
-//  }
-//
-//  30% {
-//    transform: translate(380px, 190px);
-//  }
-//
-//  40% {
-//    transform: translate(600px, 150px);
-//  }
-//
-//  50% {
-//    transform: translate(760px, 80px);
-//  }
-//
-//  60% {
-//    transform: translate(600px, 150px);
-//  }
-//
-//  70% {
-//    transform: translate(380px, 190px);
-//  }
-//
-//  80% {
-//    transform: translate(270px, 50px);
-//  }
-//
-//  90% {
-//    transform: translate(150px, 115px);
-//  }
-//
-//
-//  100% {
-//    transform: translate(0, 0);
-//  }
-//}
-
 footer {
   position: relative;
   background-image: linear-gradient(141deg, #FF867E 0%, #FFA270 21%, #FFAA6C 27%, #FFA876 52%, #FE906A 73%, #FF837D 100%);
@@ -84,9 +36,6 @@ footer {
       left: 0;
       width: 100%;
       height: 100%;
-      .cls-50 {
-        //animation: bird 40s linear infinite;
-      }
     }
   }
   a {
@@ -144,6 +93,13 @@ footer {
           }
         }
       }
+      &.github {
+        a {
+          &:before {
+            background: url("/images/footer-icons/github.svg") center no-repeat;
+          }
+        }
+      }
       &.facebook {
         a {
           &:before {
@@ -193,13 +149,6 @@ footer {
           }
         }
       }
-      //&.github {
-      //  a {
-      //    &:before {
-      //      background: url("/images/footer-icons/github.svg") center no-repeat;
-      //    }
-      //  }
-      //}
     }
   }
   .privacy-terms {

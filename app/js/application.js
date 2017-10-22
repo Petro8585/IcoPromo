@@ -1,7 +1,7 @@
 'use strict'
 
 $(function () {
-  new OffsetClassName('header', 'scroll-header', 300, 30)
+  new OffsetClassName('header', 'scroll-header', 150, 30)
   new LandingNav('.nav')
   var timer
   dataLoader(function (data) {
@@ -9,15 +9,16 @@ $(function () {
     if (timer) { return timer.setEndTime(date) }
     timer = new Timer('.timer', date)
   })
-  // new BonusList(
-  //   '.ico-details__content-bonus-days',
-  //   [
-  //     {id: '#day-1-2', value: 0.3},
-  //     {id: '#day-2-5', value: 0.15},
-  //     {id: '#day-5-10', value: 0.07},
-  //     {id: '#day-10-30', value: 0.03}
-  //   ]
-  // )
+  new BonusList(
+    '.ico-details__content-bonus-days',
+    [
+      {id: '#1-month', value: 0.01},
+      {id: '#3-month', value: 0.05},
+      {id: '#6-month', value: 0.125},
+      {id: '#9-month', value: 0.20},
+      {id: '#12-month', value: 0.275}
+    ]
+  )
   new TreeEffects('.roadmap-tree')
   new ShowAll('.why-rentberry__content-videos', '#showAllVideos', '.why-rentberry__content-videos-list')
   new ShowAll('.all-team-wrapper', '#showAllTeam', '.all-team')
@@ -37,10 +38,8 @@ $(function () {
   manageSlowScrolls(slowScrolls)
 
   new Animations()
-  // new Counters('#participants', '#countries', '#money')
-  // new CommittedProgress('.commit-progress')
+  new Counters('#participants', '#countries', '#money')
+  new CommittedProgress('.commit-progress')
   new MobileMenu('#menu-toggle', '.menu-close, #app-nav a, #app-nav .stay-updated-btn', '#app-nav')
-
-  // new Dropdown('#languages-dropdown-toggle', '#languages-dropdown-menu')
-  // new Dropdown('#languages-dropdown-toggle-mobile', '#languages-dropdown-menu-mobile')
+  new EventList('.roadshow-component')
 })

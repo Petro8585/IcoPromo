@@ -1,29 +1,40 @@
 'use strict'
 
+/**
+ * ShowAll
+ *
+ * Main usage:
+ *  new ShowAll(selector, action, list)
+ *
+ * @param selector - element selector
+ * @param action - element selector
+ * @param list - element selector
+ * @constructor
+ */
 var ShowAll = function (selector, action, list) {
   this.el = $(selector)
-  this.images = $( selector + ' img[data-src]')
+  this.images = $(selector + ' img[data-src]')
   this.action = this.el.find(action)
   this.list = this.el.find(list)
 
   this.init()
 }
 
-
 ShowAll.prototype = {
+
   openList: function () {
 
-    this.images.each(function(index, img) {
+    this.images.each(function (index, img) {
 
       var src = img.getAttribute('data-src')
       var srcset = img.getAttribute('data-srcset')
 
-      img.setAttribute('src', src);
-      img.setAttribute('srcset', srcset);
-      img.onload = function() {
-        img.removeAttribute('data-src');
-      };
-    });
+      img.setAttribute('src', src)
+      img.setAttribute('srcset', srcset)
+      img.onload = function () {
+        img.removeAttribute('data-src')
+      }
+    })
 
     var heightNow = this.list.outerHeight()
     var heightFull = this.list.css({height: 'auto'}).outerHeight()
@@ -53,6 +64,7 @@ ShowAll.prototype = {
       }.bind(this)
     })
   },
+
   init: function () {
     this.action.click(this.openList.bind(this))
   }

@@ -2,7 +2,7 @@
   "title": "Token Sale",
   "items": [
     {
-      "title": "What is <br> Rentberry Token",
+      "title": "What is&nbsp;<br>Rentberry Token",
       "description": "Rentberry Token is our proprietary cryptocurrency designed to create cross-border standards of rental process and keep all rental transactions as secure as possible."
     },
     {
@@ -10,8 +10,8 @@
       "description": "BERRY"
     },
     {
-      "title": "Total Supply",
-      "description": "700,000,000 tokens"
+      "title": "Sale Cap",
+      "description": "500,000,000 BERRY&nbsp;<br class=\"mobile-only\">(70% of all tokens)"
     },
     {
       "title": "Fixed Limit",
@@ -22,33 +22,55 @@
       "description": "1 ETH = 1,400 BERRY"
     },
     {
+      "title": "Sale Price Function",
+      "description": "​1 BERRY = max(1 ETH/1,400 BERRY, [Amount Raised/$50,000,000] * 1 ETH/1,400 BERRY)"
+    },
+    {
       "title": "Currency",
       "description": "ETH, BTC"
     },
     {
+      "title": "Min/Max Purchase",
+      "description": "0.1 ETH / 30,000 ETH"
+    },
+    {
       "title": "Starts",
-      "description": "November 20th (9AM EST, 1PM GMT, 9PM HKT)"
+      "description": "November 20th (9AM EST, 3PM CET, 9PM HKT)"
     }
   ],
   "bonus": {
-    "title": "Bonus",
+    "title": "Vesting",
+    "discount": "Discount",
     "items": [
       {
-        "title": "First 24h",
-        "id": "day-1-2"
+        "title": "1 month",
+        "id": "1-month"
       },
       {
-        "title": "Day 2-3",
-        "id": "day-2-5"
+        "title": "3 month",
+        "id": "3-month"
       },
       {
-        "title":  "Day 3-5",
-        "id": "day-5-10"
+        "title": "6 month",
+        "id": "6-month"
       },
       {
-        "title": "Day 5-10",
-        "id": "day-10-30"
+        "title": "9 month",
+        "id": "9-month"
+      },
+      {
+        "title": "12 month",
+        "id": "12-month"
       }
     ]
+  },
+  "extraBonus": {
+    "title": "Extra Bonus",
+    "image": {
+      "alt": "Extra Bonus",
+      "src": "/images/extra_bonus.png",
+      "srcset": "/images/extra_bonus@2x.png 2x"
+    },
+    "description": "All ICO participants become part of Exclusive Rentberry Club"
   }
 }

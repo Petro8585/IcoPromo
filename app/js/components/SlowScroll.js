@@ -1,5 +1,17 @@
 'use strict'
 
+/**
+ * SlowScroll
+ *
+ * Main usage:
+ *  new SlowScroll(selector, speed, start, startPointOffset)
+ *
+ * @param selector - element selector
+ * @param speed - number
+ * @param start - number
+ * @param startPointOffset - ?number
+ * @constructor
+ */
 var SlowScroll = function (selector, speed, start, startPointOffset) {
   this.el = $(selector)
   this.speed = speed
@@ -10,9 +22,16 @@ var SlowScroll = function (selector, speed, start, startPointOffset) {
 }
 
 SlowScroll.prototype = {
+
   reset: function () {
     this.el.css('transform', 'translateY(0px)')
   },
+
+  /**
+   * @param scrollTop - number
+   * @param windowHeight - number
+   * @param ignorePosition - bool
+   */
   calcOffset: function (scrollTop, windowHeight, ignorePosition) {
     var scrollBottom = scrollTop + windowHeight
     var elScrollTop = this.el.offset().top - this.prevTransform
@@ -42,6 +61,14 @@ SlowScroll.prototype = {
   }
 }
 
+/**
+ * manageSlowScrolls
+ *
+ * Main usage:
+ *  manageSlowScrolls([new SlowScroll(selector, speed, start, startPointOffset)])
+ *
+ * @param slowScrolls - Array<SlowScroll>
+ */
 var manageSlowScrolls = function (slowScrolls) {
   var prevMobile, currentMobile, request
 

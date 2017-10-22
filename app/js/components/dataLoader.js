@@ -1,5 +1,12 @@
 'use strict'
 
+/**
+ * dataLoader - singleton to receive data from server
+ *
+ * Main usage:
+ *  var subscription = dataLoader(cb) - cb will be called when data changes
+ *  subscription.unsubscribe() - to unsubscribe from updates
+ */
 var dataLoader = (function () {
   var listeners = []
   var nextId = 0
@@ -18,13 +25,13 @@ var dataLoader = (function () {
   updateListeners()
 
   var config = {
-    apiKey: "AIzaSyBYzdxri6xHy9_74RidjVZtpLpXqQ8x1Fo",
-    authDomain: "jovial-lamp-163411.firebaseapp.com",
-    databaseURL: "https://jovial-lamp-163411.firebaseio.com",
-    projectId: "jovial-lamp-163411"
-  };
+    apiKey: 'AIzaSyBYzdxri6xHy9_74RidjVZtpLpXqQ8x1Fo',
+    authDomain: 'jovial-lamp-163411.firebaseapp.com',
+    databaseURL: 'https://jovial-lamp-163411.firebaseio.com',
+    projectId: 'jovial-lamp-163411'
+  }
 
-  firebase.initializeApp(config);
+  firebase.initializeApp(config)
   var env = $('body').data('env')
   var databaseRef = firebase.database().ref('/' + env)
   databaseRef.on('value', function (dataSnapshot) {
@@ -33,6 +40,12 @@ var dataLoader = (function () {
     updateListeners()
   })
 
+  /**
+   * Subscription
+   *
+   * @param cb - function
+   * @constructor
+   */
   var Subscription = function (cb) {
     this.id = ++nextId
     this.cb = cb

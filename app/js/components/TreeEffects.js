@@ -1,5 +1,14 @@
 'use strict'
 
+/**
+ * TreeEffects
+ *
+ * Main usage:
+ *  new TreeEffects(tree)
+ *
+ * @param tree - element selector
+ * @constructor
+ */
 var TreeEffects = function (tree) {
   this.el = $(tree)
   this.leftCards = this.el.find('.left .roadmap-item-card')
@@ -10,6 +19,7 @@ var TreeEffects = function (tree) {
 }
 
 TreeEffects.prototype = {
+
   hideCards: function () {
     this.leftCards.css({
       opacity: 0,
@@ -23,6 +33,7 @@ TreeEffects.prototype = {
     this.rightCards.find('.tree-connect').css({width: 0})
     this.visible = 0
   },
+
   showContainedCards: function () {
     var scrollTop = $(document).scrollTop()
     var windowHeight = $(window).innerHeight()
@@ -43,6 +54,7 @@ TreeEffects.prototype = {
     $.each(this.leftCards, showContainedCard)
     $.each(this.rightCards, showContainedCard)
   },
+
   init: function () {
     this.hideCards()
     this.showContainedCards()

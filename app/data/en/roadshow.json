@@ -1,0 +1,176 @@
+{
+  "title": "Roadshow",
+  "description": "We are invited as a Keynote Speaker to many blockchain events&nbsp;<br class=\"desktop-only\"> around the world. Some of the events are listed below. Our team is&nbsp;<br class=\"desktop-only\"> looking forward to meeting you there.",
+  "cities": [
+    {
+      "id": "1",
+      "city": "San Francisco",
+      "events": [
+        {
+          "name": "Ethereal Summit",
+          "place": "San Francisco, USA",
+          "date": "October 27",
+          "linkTitle": "etherealsummit.com",
+          "linkUrl": "https://etherealsummit.com/"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "city": "Los Angeles",
+      "events": [
+        {
+          "name": "Block-Con",
+          "place": "Los Angeles, USA",
+          "date": "October 10-11",
+          "linkTitle": "goblockcon.com",
+          "linkUrl": "https://www.goblockcon.com/cth_speaker/alex-lubinsky/"
+        },
+        {
+          "name": "World Funding Summit",
+          "place": "Los Angeles, USA",
+          "date": "November 17-18",
+          "linkTitle": "worldfundingsummit.com",
+          "linkUrl": "http://worldfundingsummit.com/speakers"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "city": "Las Vegas",
+      "events": [
+        {
+          "name": "Money20/20",
+          "place": "Las Vegas, USA",
+          "date": "October 22-25",
+          "linkTitle": "money2020.com",
+          "linkUrl": "https://us.money2020.com/speakers"
+        },
+        {
+          "name": "CoinAgenda Global",
+          "place": "Las Vegas, USA",
+          "date": "October 24-26",
+          "linkTitle": "coinagenda.com",
+          "linkUrl": "http://www.coinagenda.com/"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "city": "New York",
+      "events": [
+        {
+          "name": "Blockchain Economic Forum",
+          "place": "New York, USA",
+          "date": "October 31 – November 1",
+          "linkTitle": "blockchainforum.global",
+          "linkUrl": "http://blockchainforum.global/"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "city": "Santa Clara",
+      "events": [
+        {
+          "name": "Blockchain Expo North America",
+          "place": "Santa Clara, USA",
+          "date": "November 29-30",
+          "linkTitle": "blockchain-expo.com",
+          "linkUrl": "https://blockchain-expo.com/northamerica/"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "city": "London",
+      "events": [
+        {
+          "name": "Blockchain Summit",
+          "place": "London, UK",
+          "date": "November 28",
+          "linkTitle": "blockchainsummitlondon.com",
+          "linkUrl": "http://blockchainsummitlondon.com/"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "city": "Shanghai",
+      "events": [
+        {
+          "name": "Global Fintech & Blockchain Summit",
+          "place": "Shanghai, China",
+          "date": "October 26",
+          "linkTitle": "gfbccs.com",
+          "linkUrl": "http://gfbccs.com/"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "city": "Shenzhen",
+      "events": [
+        {
+          "name": "Asia Blockchain Application Congress",
+          "place": "Shenzhen, China",
+          "date": "November 9-10",
+          "linkTitle": "ibdac.com.cn",
+          "linkUrl": "http://www.ibdac.com.cn/en/"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "city": "Singapore",
+      "events": [
+        {
+          "name": "BlockShow CoinTelegraph",
+          "place": "Singapore",
+          "date": "November 29-30",
+          "linkTitle": "blockshowasia.com",
+          "linkUrl": "https://blockshowasia.com/"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "city": "Seoul",
+      "events": [
+        {
+          "name": "Inside Fintech Conference & Expo",
+          "place": "Seoul, Korea",
+          "date": "November 30 – December 1",
+          "linkTitle": "insidefintechconference.com",
+          "linkUrl": "http://www.insidefintechconference.com/seoul/2017"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "city": "Moscow",
+      "events": [
+        {
+          "name": "Blockchain & Bitcoin Conference",
+          "place": "Moscow, Russia",
+          "date": "November 15-16",
+          "linkTitle": "moscow.blockchainconf.world",
+          "linkUrl": "https://moscow.blockchainconf.world"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "city": "Davos",
+      "events": [
+        {
+          "name": "d10e",
+          "place": "Davos, Switzerland",
+          "date": "October 28-31",
+          "linkTitle": "d10e.biz",
+          "linkUrl": "http://d10e.biz/gibraltar-2017/"
+        }
+      ]
+    }
+  ]
+}

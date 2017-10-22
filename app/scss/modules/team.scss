@@ -12,15 +12,6 @@
   }
   .advisors-container {
     margin-top: 50px;
-    .all-investors {
-      &-list {
-        //.container {
-        //  &::after {
-        //    background-image: linear-gradient(180deg, rgba(236, 234, 247, 0.00) 3%, #EBE9F8 73%);
-        //  }
-        //}
-      }
-    }
   }
 
   .all-investors {
@@ -32,18 +23,6 @@
       .container {
         position: relative;
         max-height: 100%;
-
-        //&::after {
-        //  content: '';
-        //  position: absolute;
-        //  left: 10px;
-        //  bottom: 0;
-        //  width: calc(100% - 20px);
-        //  height: 125px;
-        //  background-image: linear-gradient(180deg, rgba(238, 236, 249, 0.00) 0%, #EDEBF8 100%);
-        //  transition: .2s ease;
-        //  display: none;
-        //}
       }
 
       &-item {
@@ -55,7 +34,6 @@
           border-radius: 8px;
           overflow: hidden;
           font-size: 0;
-          //box-shadow: 0 28px 48px 0 rgba(50, 49, 58, .25);
           background: #fff;
           padding-bottom: 100%;
           height: 0;
@@ -77,6 +55,10 @@
 
           .investor-name {
             font-weight: bold;
+          }
+
+          .investor-position {
+            color: $color-blackLight;
           }
         }
       }
@@ -103,19 +85,13 @@
             opacity: 0;
             height: 0;
           }
-
-          //.all-investors-list-item {
-          //  .investor-img-wrapper {
-          //    box-shadow: 0 28px 48px 0 rgba(50, 49, 58, 0.25) !important;
-          //  }
-          //}
         }
       }
     }
 
     &.closed {
       .all-investors-list {
-        -webkit-mask-image: linear-gradient(to top, rgba(255,255,255,0) 4%,rgba(255,255,255,1) 40%);
+        -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 1) 40%);
         height: 520px;
 
         @include size(desktop-md) {
@@ -217,9 +193,10 @@
     .big-team {
       margin-top: 100px;
       .image {
-        border: 10px solid #fff;
-        box-shadow: 0 14px 24px rgba(50, 49, 58, .25);
+        overflow: hidden;
+        border-radius: 8px;
         img {
+          width: 100%;
           display: block;
         }
       }
@@ -235,11 +212,13 @@
         font-size: 20px;
         line-height: 28px;
         margin-top: 5px;
+        color: $color-blackLight;
       }
       .description {
         margin-top: 20px;
         font-size: 16px;
         line-height: 24px;
+        color: $color-blackLight;
       }
     }
     .all-team-wrapper {
@@ -251,18 +230,13 @@
                 opacity: 0;
                 height: 0;
               }
-              .one-person {
-                .image {
-                  box-shadow: 0 14px 24px rgba(50, 49, 58, .25) !important;
-                }
-              }
             }
           }
         }
         .all-team {
           overflow: hidden;
           height: 404px;
-          -webkit-mask-image: linear-gradient(to top, rgba(255,255,255,0) 4%,rgba(255,255,255,1) 40%);
+          -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 1) 40%);
 
           @include size(desktop-md) {
             height: 410px;
@@ -306,28 +280,15 @@
         }
       }
       .all-team {
-
         margin-top: 40px;
         position: relative;
         .container {
           position: relative;
           max-height: 100%;
-
-          //&::after {
-          //  bottom: 0;
-          //  left: 10px;
-          //  content: "";
-          //  height: 120px;
-          //  width: calc(100% - 20px);
-          //  background-image: linear-gradient(180deg, rgba(248, 248, 253, 0.00) 3%, #F6F5FC 73%);
-          //  position: absolute;
-          //  display: none;
-          //  transition: .2s ease;
-          //}
         }
         .image {
-          border: 10px solid #fff;
-          box-shadow: 0 14px 24px rgba(50, 49, 58, .25);
+          border-radius: 8px;
+          overflow: hidden;
           img {
             display: block;
           }
@@ -350,6 +311,7 @@
         .position {
           font-size: 16px;
           line-height: 24px;
+          color: $color-blackLight;
         }
       }
       .all-team-action {
@@ -363,6 +325,115 @@
           line-height: 28px;
           cursor: pointer;
           font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .roadshow-container {
+    margin-top: 150px;
+    .roadshow-component {
+      margin-top: 100px;
+      .roadshow-cities {
+        .roadshow-city {
+          display: inline-block;
+          padding: 11px 30px;
+          margin-left: -30px;
+          border-radius: 26px;
+          color: $purple-active;
+          font-size: 20px;
+          line-height: 28px;
+          cursor: pointer;
+          position: relative;
+          user-select: none;
+          &.active {
+            color: #fff;
+            background: #7B53C1;
+          }
+          &:not(.active):hover {
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 30px;
+              width: calc(100% - 60px);
+              bottom: 11px;
+              border-bottom: 1px solid $purple-active;
+            }
+          }
+        }
+      }
+      .roadshow-events {
+        display: none;
+        background: #fff;
+        padding: 80px 100px;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          border-left: 8px solid $purple-active;
+          border-top-left-radius: 8px;
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background: url(/images/cubes.png) no-repeat right;
+          background-size: contain;
+          z-index: 0;
+        }
+        &.active {
+          display: block;
+        }
+        .roadshow-event {
+          position: relative;
+          z-index: 1;
+          min-height: 194px;
+          &-name {
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: bold;
+            padding-bottom: 14px;
+            position: relative;
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: 4px;
+              width: 26px;
+              background: $color-black;
+            }
+          }
+          &-place {
+            font-size: 20px;
+            line-height: 28px;
+            color: $color-blackLight;
+            margin-top: 30px;
+          }
+          &-date {
+            font-size: 20px;
+            line-height: 28px;
+            color: $color-blackLight;
+          }
+          &-link {
+            font-size: 20px;
+            line-height: 28px;
+            margin-top: 10px;
+            color: $purple-active;
+            display: inline-block;
+          }
         }
       }
     }
@@ -387,7 +458,6 @@
           }
 
           .partner-logo {
-            //box-shadow: 0 28px 48px 0 rgba(50, 49, 58, .25);
             border-radius: 8px;
             font-size: 0;
             overflow: hidden;
@@ -408,6 +478,7 @@
             &-description {
               font-size: 14px;
               line-height: 20px;
+              color: $color-blackLight;
             }
           }
         }
@@ -435,6 +506,35 @@
             .partner-info {
               display: none;
             }
+          }
+        }
+      }
+    }
+    .roadshow-container {
+      margin-top: 50px;
+      .roadshow-component {
+        margin-top: 22px;
+        .roadshow-cities {
+          .roadshow-city {
+            padding: 0;
+            margin-left: 0;
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: 10px;
+            &.active {
+              background: none;
+              color: $purple-active;
+            }
+            &:not(.active):hover {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+        .roadshow-events {
+          &.active {
+            display: none;
           }
         }
       }
@@ -470,7 +570,7 @@
           }
         }
         img {
-          width:100%;
+          width: 100%;
         }
         .name {
           margin-top: 15px;

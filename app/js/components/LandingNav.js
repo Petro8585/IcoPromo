@@ -1,5 +1,14 @@
 'use strict'
 
+/**
+ * LandingNav
+ *
+ * Main usage:
+ *  new LandingNav(selector)
+ *
+ * @param selector - element selector
+ * @constructor
+ */
 var LandingNav = function (selector) {
   this.nav = $(selector)
   this.links = this.nav.find('.links-wrapper a')
@@ -12,15 +21,21 @@ var LandingNav = function (selector) {
   this.init()
 }
 LandingNav.prototype = {
+
   changeActive: function () {
     if (!this.active) { return }
     this.links.removeClass('active')
     this.active.addClass('active')
   },
+
   removeAllActive: function () {
     this.links.removeClass('active')
     this.marker.hide()
   },
+
+  /**
+   * @param withoutTransition - bool
+   */
   updateMarkerPosition: function (withoutTransition) {
     if (!this.active || this.mobile) { return }
     if (withoutTransition) {
@@ -36,6 +51,7 @@ LandingNav.prototype = {
       this.marker.css('transition', '.3s ease')
     }
   },
+
   addListeners: function () {
     this.links.click(function (e) {
       e.preventDefault()
@@ -45,6 +61,7 @@ LandingNav.prototype = {
       }, this.scrollAnimationTime)
     }.bind(this))
   },
+
   init: function () {
     isMobile(function (mobile) {
       this.navHeight = mobile ? 50 : 80
