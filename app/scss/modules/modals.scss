@@ -43,12 +43,8 @@ body section .container > *, body header .row, body footer .row, .modal-opened .
 }
 
 #stayUpdated {
+  position: absolute;
   overflow: hidden;
-  &:not(.isAttached) {
-    input {
-      pointer-events: none;
-    }
-  }
   &.show-result {
     .result-container {
       opacity: 1;
@@ -92,6 +88,7 @@ body section .container > *, body header .row, body footer .row, .modal-opened .
     opacity: 1;
     max-height: 100%;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     .counters {
       font-size: 40px;
       font-weight: bold;

@@ -1,6 +1,8 @@
 {
   "title": "About",
-  "description": "In contrast to many startups in the blockchain space, Rentberry already has a well-established product that proved successful in the long-term rental industry.",
+  "description": "Rentberry is a fully operational long-term rental platform that leverages blockchain infrastructure to ensure seamless rental experience and allows for crowdsourcing to help tenants save billions in rental security deposits.",
+  "linkText": "rentberry.com",
+  "linkUrl": "https://rentberry.com",
   "items": [
     {
       "alt": "Founded in 2015",
@@ -28,7 +30,7 @@
     "description": "We are convinced that long-term rental space is the next industry to be disrupted by technologies, and our entire team believes that blockchain and smart contracts are the inherent part of the upcoming innovation. Here at Rentberry, our goal is to make both landlords and tenants enjoy a fully decentralized rental experience that includes open and transparent application process, crowdsourced security deposit network, instant rent payments, internationally valid Tenant and Landlord scores, to name a few.",
     "imgUrl": "/images/our-mission.jpg",
     "imgUrl2x": "/images/our-mission@2x.jpg",
-    "videoUrl": "https://www.youtube.com/embed/S2czD9fcu_8?rel=0&autoplay=1"
+    "videoUrl": "https://www.youtube.com/embed/s7pWrE1cdb4?rel=0&autoplay=1"
   },
   "problems": {
     "title": "Problems",
@@ -70,7 +72,7 @@
     ]
   },
   "solution": {
-    "title": "Solution",
+    "title": "Solutions",
     "description": "Rentberry streamlines the entire long-term rental process using blockchain and smart contracts technology and eliminates the need for a middleman making it possible for tenants and landlords to complete all rental tasks in one place.",
     "technology": {
       "block1": {

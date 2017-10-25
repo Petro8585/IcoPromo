@@ -161,7 +161,6 @@
       }
 
       .investors-countries {
-        display: flex;
         font-size: 24px;
         line-height: 28px;
         font-weight: bold;
@@ -202,7 +201,7 @@
       }
       .name {
         text-align: center;
-        margin-top: 20px;
+        margin-top: 30px;
         font-weight: bold;
         font-size: 24px;
         line-height: 28px;
@@ -212,13 +211,13 @@
         font-size: 20px;
         line-height: 28px;
         margin-top: 5px;
-        color: $color-blackLight;
+        color: $color-black;
       }
       .description {
         margin-top: 20px;
         font-size: 16px;
         line-height: 24px;
-        color: $color-blackLight;
+        color: $color-black;
       }
     }
     .all-team-wrapper {
@@ -280,7 +279,7 @@
         }
       }
       .all-team {
-        margin-top: 40px;
+        margin-top: 20px;
         position: relative;
         .container {
           position: relative;
@@ -379,6 +378,7 @@
           height: 100%;
           border-left: 8px solid $purple-active;
           border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
         }
         &::after {
           content: "";
@@ -391,6 +391,11 @@
           background: url(/images/cubes.png) no-repeat right;
           background-size: contain;
           z-index: 0;
+        }
+        &.multiple {
+          &::after {
+            opacity: .5;
+          }
         }
         &.active {
           display: block;
@@ -433,6 +438,11 @@
             margin-top: 10px;
             color: $purple-active;
             display: inline-block;
+            transition: .2s ease-out;
+            border-bottom: 1px solid transparent;
+            &:hover, &:active {
+              border-bottom: 1px solid $purple-active;
+            }
           }
         }
       }
@@ -632,6 +642,10 @@
         }
         .investors-countries {
           margin-top: 30px;
+          &-list-item {
+            font-size: 20px;
+            line-height: 28px;
+          }
           &:last-of-type {
             margin-top: 0;
             display: block;

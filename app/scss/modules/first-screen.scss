@@ -1,17 +1,3 @@
-@keyframes window {
-  0% {
-    fill: #7FE6FF;
-  }
-
-  50% {
-    fill: #fffc87;
-  }
-
-  100% {
-    fill: #7FE6FF;
-  }
-}
-
 .first-screen {
   position: relative;
   &__city {
@@ -27,18 +13,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        .cls-first-19 {
-          animation: window 5s linear infinite;
-          animation-delay: 1s;
-        }
-        .cls-first-16 {
-          animation: window 5s linear infinite;
-          animation-delay: 2s;
-        }
-        .cls-first-18 {
-          animation: window 5s linear infinite;
-          animation-delay: 3s;
-        }
       }
     }
   }

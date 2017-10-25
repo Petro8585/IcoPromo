@@ -73,6 +73,33 @@ var onClosed = function () {
   $('#registrationForm')[0].reset()
 }
 
+
+var fixInput = (function () {
+  var scrollTop
+  var body = $('body')
+  var onResize = function(){
+    body.css('height', window.innerHeight + 'px');
+  }
+
+  return {
+    open: function() {
+      scrollTop = body.scrollTop()
+      body.css({
+        'height': window.innerHeight + 'px',
+        'overflow': 'hidden'
+      });
+      $(window).bind('resize', onResize)
+    },
+    close: function() {
+      body.css({
+        'height': '',
+        'overflow': ''
+      }).scrollTop(scrollTop || 0)
+      $(window).unbind('resize', onResize)
+    }
+  }
+})()
+
 $('#stayUpdated').iziModal({
   openFullscreen: true,
   bodyOverflow: true,
@@ -80,10 +107,24 @@ $('#stayUpdated').iziModal({
   transitionIn: 'fadeIn',
   transitionOut: 'fadeOut',
   focusInput: false,
-  onOpening: onOpening,
   onOpened: onOpened,
-  onClosing: onClosing,
-  onClosed: onClosed
+  onClosed: onClosed,
+  onClosing: function () {
+    onClosing()
+    isMobile(function(mobile){
+      if(mobile) {
+        fixInput.close()
+      }
+    }).unsubscribe()
+  },
+  onOpening: function () {
+    onOpening()
+    isMobile(function(mobile){
+      if(mobile) {
+        fixInput.open()
+      }
+    }).unsubscribe()
+  }
 })
 
 $('.stay-updated-btn').click(function () {

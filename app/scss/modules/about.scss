@@ -4,9 +4,8 @@
 }
 
 .about__content {
-  padding: 150px 0;
+  padding: 100px 0;
   .about__description-container {
-    margin-top: 100px;
     border-bottom: 1px solid #E7E9EF;
     position: relative;
     &::after {
@@ -23,11 +22,13 @@
       font-size: 20px;
       line-height: 28px;
       margin-bottom: 26px;
+      margin-top: 100px;
     }
     img {
       display: block;
       box-shadow: 0 14px 24px 0 rgba(50, 49, 58, .14);
       border-radius: 25px 25px 0 0;
+      margin-left: auto;
     }
     .link-btn {
       text-align: center;
@@ -85,7 +86,7 @@
     font-size: 24px;
     line-height: 28px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .our-mission {
     margin-top: 150px;
@@ -136,7 +137,7 @@
       margin-top: 100px;
       .problems-item {
         & + .problems-item {
-          margin-top: 85px;
+          margin-top: 100px;
         }
         &-title {
           font-size: 48px;
@@ -157,9 +158,7 @@
         &-img {
           img {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: -15px;
+            margin: -6px auto -59px;
             max-width: 378px;
           }
         }
@@ -193,7 +192,7 @@
       }
     }
     .technology {
-      margin-top: 150px;
+      margin-top: 95px;
       &-img {
         img {
           margin: 0 -8%;
@@ -204,6 +203,7 @@
           font-size: 48px;
           line-height: 48px;
           font-weight: bold;
+          margin-top: -10px;
         }
         &-subtitle {
           font-size: 24px;
@@ -311,6 +311,7 @@
       p {
         font-size: 16px;
         line-height: 22px;
+        margin-top: 0;
       }
       .link-btn {
         margin-top: 20px;
