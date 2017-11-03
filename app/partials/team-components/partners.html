@@ -1,0 +1,38 @@
+<div class="partners-container">
+  <div class="container">
+    <div class="row"
+         data-animate="true"
+         data-animate-transform="true">
+      <div class="col-md-12 col-xs-10 col-xs-offset-1 col-md-offset-0">
+        <div class="section-header">@partners.title</div>
+        <p class="section-sub-header">@partners.description</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="all-partners">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="partners-list"
+               data-animate="true"
+               data-animate-transform="true">
+
+            @for (var i = 0; i < partners.items.length; i++) {
+            <div class="partners-list-item">
+              <div class="partner-logo">
+                <img src="`+partners.items[i].src+`" srcset="`+partners.items[i].srcset+`" alt="">
+              </div>
+              <div class="partner-info">
+                <div class="partner-info-name">`+partners.items[i].name+`</div>
+                <div class="partner-info-description">`+partners.items[i].description+`</div>
+              </div>
+            </div>
+            }
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

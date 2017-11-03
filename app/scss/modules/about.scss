@@ -260,7 +260,7 @@
           height: 20px;
         }
         .one-logo {
-          background-size: 55px;
+          background-size: 75px;
           &-forbes {
             width: 55px;
             height: 15px;
@@ -270,35 +270,42 @@
           &-wsj {
             width: 39px;
             height: 22px;
-            background-position: 0 -17px;
+            background-position: 0 -36px;
             margin-right: 24px;
           }
           &-fox5 {
             width: 44px;
             height: 17px;
-            background-position: 0 -40px;
+            background-position: 0 -84px;
             margin-right: 24px;
           }
           &-nbc {
             width: 27px;
             height: 27px;
-            background-position: 0 -60px;
+            background-position: 0 -123px;
           }
           &-bbc {
             width: 40px;
             height: 22px;
-            background-position: 0 -92px;
+            background-position: 0 -182px;
+            margin-right: 24px;
           }
           &-abc {
             width: 31px;
             height: 25px;
-            background-position: 0 -121px;
-            margin: 0 30px;
+            background-position: 0 -231px;
+            margin-right: 24px;
           }
           &-pix {
-            width: 45px;
+            width: 46px;
             height: 12px;
-            background-position: 0 -152px;
+            background-position: 0 -286.6px;
+            margin-right: 24px;
+          }
+          &-huffpost {
+            width: 75px;
+            height: 9.5px;
+            background-position: 0 -317px;
           }
         }
       }
@@ -460,41 +467,70 @@
     padding: 53px 0;
     li {
       .one-logo {
-        background-size: 109px;
+        background-size: 150px;
         &-forbes {
           width: 109px;
           height: 30px;
           background-position: 0 0;
+          &:hover {
+            background-position: 0 -36px;
+          }
         }
         &-wsj {
           width: 77px;
           height: 43px;
-          background-position: 0 -34px;
+          background-position: 0 -72px;
+          &:hover {
+            background-position: 0 -120px;
+          }
         }
         &-fox5 {
           width: 87px;
           height: 33px;
-          background-position: 0 -82px;
+          background-position: 0 -169px;
+          &:hover {
+            background-position: 0 -208px;
+          }
         }
         &-nbc {
           width: 54px;
           height: 54px;
-          background-position: 0 -119px;
+          background-position: 0 -246px;
+          &:hover {
+            background-position: 0 -305px;
+          }
         }
         &-bbc {
           width: 79px;
           height: 44px;
-          background-position: 0 -184px;
+          background-position: 0 -364px;
+          &:hover {
+            background-position: 0 -413px;
+          }
         }
         &-abc {
           width: 61px;
           height: 50px;
-          background-position: 0 -240px;
+          background-position: 0 -462px;
+          &:hover {
+            background-position: 0 -518px;
+          }
         }
         &-pix {
           width: 90px;
           height: 24px;
-          background-position: 0 -302px;
+          background-position: 0 -574px;
+          &:hover {
+            background-position: 0 -604px;
+          }
+        }
+        &-huffpost {
+          width: 150px;
+          height: 18px;
+          background-position: 0 -635px;
+          &:hover {
+            background-position: 0 -659px;
+          }
         }
       }
     }

@@ -18,6 +18,7 @@ var LandingNav = function (selector) {
       return $(this.getAttribute('href'))
     })
 
+  this.mobileMenu = new MobileMenu('#menu-toggle', '.menu-close, #app-nav .stay-updated-btn', '#app-nav')
   this.init()
 }
 LandingNav.prototype = {
@@ -53,12 +54,22 @@ LandingNav.prototype = {
   },
 
   addListeners: function () {
+    var timeout = 0
     this.links.click(function (e) {
       e.preventDefault()
-      var section = $(e.target.getAttribute('href'))
-      $('html, body').animate({
-        scrollTop: section.offset().top - this.navHeight + 1
-      }, this.scrollAnimationTime)
+
+      if(this.mobile) {
+        timeout = 400
+        this.mobileMenu.closeMenu(e)
+      }
+
+      setTimeout(function(){
+        var section = $(e.target.getAttribute('href'))
+
+        $('html, body').animate({
+          scrollTop: section.offset().top - this.navHeight + 6
+        }, this.scrollAnimationTime)
+      }.bind(this), timeout)
     }.bind(this))
   },
 

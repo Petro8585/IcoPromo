@@ -14,8 +14,8 @@ var CommittedProgress = function (selector, maxProgress) {
   this.el = $(selector)
   this.progressEl = this.el.find('.commit-progress-value')
   this.sumEl = this.el.find('.sum')
-  this.maxProgress = maxProgress || 150000000
-  this.step = 10000000
+  this.maxProgress = maxProgress || 30000000
+  this.step = 0
 
   this.init()
 }

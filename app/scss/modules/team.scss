@@ -10,8 +10,34 @@
     vertical-align: middle;
     background: url(/images/linkedin-icon.svg) center no-repeat;
   }
+  .investors-container {
+    .all-investors-list {
+      &:after {
+        content: '';
+        display: none;
+        width: 100%;
+        height: 50px;
+        z-index: 9;
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(244,243,251,0) 0%, #F4F3FB 100%);
+      }
+    }
+  }
   .advisors-container {
     margin-top: 50px;
+    .all-investors-list {
+      &:after {
+        content: '';
+        display: none;
+        width: 100%;
+        height: 50px;
+        z-index: 9;
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(240,238,250,0) 0%, #F0EEFA 100%);
+      }
+    }
   }
 
   .all-investors {
@@ -68,7 +94,7 @@
       text-align: center;
       font-size: 0;
       display: none;
-
+      margin-top: 20px;
       span {
         font-size: 20px;
         line-height: 28px;
@@ -93,6 +119,9 @@
       .all-investors-list {
         -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 1) 40%);
         height: 520px;
+        &:after {
+          display: block;
+        }
 
         @include size(desktop-md) {
           height: 490px;
@@ -211,13 +240,13 @@
         font-size: 20px;
         line-height: 28px;
         margin-top: 5px;
-        color: $color-black;
+        color: $color-blackLight;
       }
       .description {
         margin-top: 20px;
         font-size: 16px;
         line-height: 24px;
-        color: $color-black;
+        color: $color-blackLight;
       }
     }
     .all-team-wrapper {
@@ -245,6 +274,16 @@
             height: 440px;
           }
 
+          &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 50px;
+            z-index: 9;
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(249,248,253,0) 0%, #F9F8FD 100%);
+          }
           .container {
             &::after {
               display: block;
@@ -276,6 +315,7 @@
         }
         .all-team-action {
           display: block;
+          margin-top: 20px;
         }
       }
       .all-team {
@@ -403,7 +443,7 @@
         .roadshow-event {
           position: relative;
           z-index: 1;
-          min-height: 194px;
+          min-height: 195px;
           &-name {
             font-size: 24px;
             line-height: 28px;
@@ -496,8 +536,150 @@
     }
   }
 }
+#modalGallery {
+  .iziModal-content, .iziModal-wrap {
+    height: 100% !important;
+  }
+}
+.roadshow-gallery {
+  overflow: hidden;
+  margin-top: 100px;
+  position: relative;
+}
+.slider {
+  &.modal-slider {
+    height: 100%;
+    margin-top: 0;
+    .slick-list, .slick-track, .slick-slide {
+      height: 100%;
+    }
+    .slick-slide {
+      min-width: 100vw !important;
+      & > div {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        max-height: 80%;
+        height: 100%;
+        & > div {
+          height: 100%;
+        }
+      }
+    }
+    img {
+      height: 100%;
+      max-height: 100%;
+      margin: 0 auto;
+    }
+    .slick-track {
+      min-width: 100vw !important;
+    }
+    .slick-prev {
+      left: 100px;
+    }
+    .slick-next {
+      right: 100px;
+    }
+  }
+  &:not(.modal-slider) {
+    cursor: pointer;
+    img {
+      width: 100%;
+      border-radius: 0;
+    }
+    .slick-slide {
+      cursor: pointer;
+      margin: 0 11px;
+      @include size(desktop-sm) {
+        width: calc(1180px / 3 - 22px);
+      }
+  
+      @include size(desktop-md) {
+        width: calc(1260px / 3 - 22px);
+      }
+  
+      @include size(desktop-lg) {
+        width: calc(1380px / 3 - 22px);
+      }
+    }
+    .slick-track {
+      cursor: default;
+      //margin-left: -11px;
+    }
+    .slick-list {
+      overflow: visible;
+    }
+  }
+  &.simple-slider {
+    position: static;
+  }
+  img {
+    border-radius: 8px;
+    outline: none;
+  }
+  .slick-slide {
+    outline: none;
+  }
+  .slick-prev, .slick-next {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    transform: translateY(-50%);
+    transition: all .3s ease-out;
+    z-index: 9;
+    display: block;
+    border: none;
+    outline: none;
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+      &::before {
+        opacity: 1;
+      }
+    }
+    &::after, &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity .2s ease;
+    }
+    &::after {
+      opacity: 1;
+      background: url('/images/next-gallery.svg') bottom center no-repeat;
+    }
+    &::before {
+      opacity: 0;
+      background: url('/images/next-gallery.svg') top center no-repeat;
+    }
+    &.slick-disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  .slick-prev {
+    left: 20px;
+    &::after, &::before {
+      transform: rotate(180deg);
+    }
+  }
+  .slick-next {
+    right: 20px;
+  }
+}
 
 @media ($mobile) {
+  .slider {
+    display: none;
+  }
   .team-section {
     padding: 50px 0;
     .partners-container {

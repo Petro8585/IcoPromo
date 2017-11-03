@@ -5,7 +5,6 @@ header {
   right: 0;
   transition: background .3s ease;
   z-index: 100;
-
   &.scroll-header {
     background: $color-purpleLight;
   }
@@ -13,7 +12,7 @@ header {
   .logo-wrapper {
     font-size: 0;
     .logo {
-      margin-top: -6px;
+      margin-top: -8px;
       display: inline-block;
     }
   }
@@ -75,7 +74,7 @@ header {
   }
 
   .stay-updated-wrapper {
-    min-width: 260px;
+    min-width: 230px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -198,14 +197,29 @@ header {
 }
 
 @media ($mobile) {
+  body {
+    &.menu-opened {
+      //position: relative;
+      overflow: hidden;
+      position: fixed;
+      //height: 100%;
+    }
+  }
   header {
     padding: 26px 20px 20px !important;
     transition: background .3s ease, padding-top .3s ease, padding-bottom .3s ease;
     &.scroll-header {
       padding: 15px 20px 9px !important;
     }
+    .logo-wrapper {
+      flex-grow: 1;
+    }
     .nav {
+      //min-height: 450px;
+      //min-height: 100%;
       position: fixed;
+      //position: absolute;
+      overflow: hidden;
       top: 0;
       left: 0;
       bottom: 0;
@@ -214,10 +228,19 @@ header {
       height: 100%;
       background: rgba(57, 38, 91, .95);
       display: none;
-      overflow: auto;
       &.opened {
+        .all-menu-container {
+          height: 100%;
+        }
+      }
+      .menu-elements {
         display: flex;
+        min-height: 100%;
         flex-direction: column;
+      }
+      .all-menu-container {
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
       }
       .mobile-menu-header {
         display: flex;
@@ -231,6 +254,7 @@ header {
         }
       }
       .links-wrapper {
+        padding-top: 40px;
         flex-grow: 1;
         flex-shrink: 0;
         display: flex;
@@ -273,8 +297,33 @@ header {
 }
 @media ($desktop) {
   header {
+    .nav {
+      min-width: 700px;
+      display: block !important;
+    }
+    .row {
+      justify-content: space-between;
+    }
+    .stay-updated-wrapper {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
     .logo-wrapper {
-      width: 129px;
+      padding-right: 10px;
+      padding-left: 10px;
+      img {
+        width: 129px;
+        max-width: 129px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1526px) {
+  header {
+    .logo-wrapper, .stay-updated-wrapper {
+      flex-grow: 1;
+      flex-basis: 0;
     }
   }
 }

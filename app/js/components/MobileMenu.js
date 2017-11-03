@@ -25,19 +25,31 @@ var MobileMenu = function (openEl, closeEl, menuEl) {
 MobileMenu.prototype = {
 
   openMenu: function () {
+    this.scrollTop = $(document).scrollTop()
+
     this.openEl.fadeOut(200)
     this.menuEl.addClass('opened').fadeIn(200)
+
     $('body')
-      .addClass('stop-scrolling')
-      .bind('touchmove', function (e) {e.preventDefault()})
+      .css({
+        'top': - this.scrollTop + 'px'
+      })
+      .addClass('menu-opened')
   },
 
-  closeMenu: function () {
+  closeMenu: function (e) {
     this.menuEl.fadeOut(200)
     this.openEl.removeClass('opened').fadeIn(200)
+
     $('body')
-      .removeClass('stop-scrolling')
-      .unbind('touchmove')
+      .removeClass('menu-opened')
+      .css({
+        'top': ''
+      })
+
+    if(e.target.className === 'menu-close' || e.target.id === 'registerNowMobileHeaderBtn') {
+      $(document).scrollTop(this.scrollTop || 0)
+    }
   },
 
   init: function () {
@@ -45,15 +57,14 @@ MobileMenu.prototype = {
       if (mobile) {
         this.openEl.show()
         this.menuEl.removeClass('opened').hide()
+        $('body').removeClass('menu-opened')
         this.openEl.bind('click', this.openMenu)
         this.closeEl.bind('click', this.closeMenu)
       }
       else {
         this.openEl.hide()
         this.menuEl.show()
-        $('body')
-          .removeClass('stop-scrolling')
-          .unbind('touchmove')
+        $('body').removeClass('menu-opened')
         this.openEl.unbind('click', this.openMenu)
         this.closeEl.unbind('click', this.closeMenu)
       }

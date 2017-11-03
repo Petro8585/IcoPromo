@@ -12,11 +12,12 @@
           </h1>
         </div>
 
-        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 timer"
+        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 timer first-screen-loader"
+             id="firstScreenLoader"
              data-animate="true"
-             data-animate-transform="true"
+             data-animate-transform="false"
              data-animate-target=".first-screen__content"
-             data-animate-delay="500">
+             data-animate-delay="600">
           <div class="timer-head-wrapper">
             <h2 class="timer-head">
               <span class="timer-head-title">@firstScreen.timer.title</span>
@@ -48,7 +49,7 @@
             </div>
           </div>
           <div class="timer-action">
-            <button class="timer-action__button stay-updated-btn">@firstScreen.timer.stayUpdated</button>
+            <button id="registerNowBtn" class="timer-action__button stay-updated-btn">@firstScreen.timer.stayUpdated</button>
           </div>
           <!--<div class="timer-description">-->
             <!--<span>@firstScreen.timer.description</span>-->

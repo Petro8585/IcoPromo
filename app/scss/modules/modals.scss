@@ -61,6 +61,16 @@ body section .container > *, body header .row, body footer .row, .modal-opened .
       pointer-events: none;
     }
   }
+  .registration-form-server-error {
+    font-size: 16px;
+    line-height: 28px;
+    background: #DD4961;
+    border-radius: 25px;
+    padding: 6px 20px;
+    top: 0;
+    width: 100%;
+    display: none;
+  }
   .result-container {
     text-align: center;
     overflow: hidden;
@@ -70,13 +80,15 @@ body section .container > *, body header .row, body footer .row, .modal-opened .
     pointer-events: none;
     .title {
       font-size: 48px;
-      margin-bottom: 85px;
+      line-height: 48px;
+      margin-bottom: 30px;
     }
     p {
+      font-weight: bold;
       font-size: 24px;
       line-height: 28px;
-      margin-top: 30px;
-      color: #D4D0DC;
+      margin-bottom: 50px;
+      color: #D2CDDC;
       a {
         color: #fff;
         font-weight: bold;
@@ -123,18 +135,6 @@ body section .container > *, body header .row, body footer .row, .modal-opened .
       padding: 50px 0 !important;
       form {
         position: relative;
-        .server-error {
-          font-size: 16px;
-          line-height: 28px;
-          background: #DD4961;
-          border-radius: 25px;
-          padding: 6px 20px;
-          position: absolute;
-          top: 0;
-          transform: translateY(calc(-100% - 30px));
-          width: 100%;
-          display: none;
-        }
       }
     }
   }
@@ -310,11 +310,15 @@ body section .container > *, body header .row, body footer .row, .modal-opened .
     height: 100% !important;
   }
   .container {
-    position: relative;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
+    min-height: 400px;
+    height: 100%;
+    .row {
+      position: relative;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+    }
   }
   .title {
     font-weight: bold;
@@ -431,20 +435,46 @@ body section .container > *, body header .row, body footer .row, .modal-opened .
 
 @media ($mobile) {
   #stayUpdated {
+    &.show-result {
+      .result-container {
+        padding: 100px 20px !important;
+        min-height: 500px;
+        height: 100%;
+        .row {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .result-container {
+      .title {
+        font-size: 24px;
+        line-height: 28px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
     .form-container {
       .form-content {
         margin-top: 30px;
-        form {
-          .server-error {
-            position: fixed;
-            top: 0;
-            transform: none;
-            left: 0;
-            border-radius: 0;
-            z-index: 10000000;
-          }
-        }
       }
+    }
+    .registration-form-server-error {
+      position: fixed;
+      top: 0;
+      left: 0;
+      border-radius: 0;
+      transform: translateZ(0);
+      z-index: 10000000;
+    }
+  }
+  #emailVerified {
+    .title {
+      font-size: 24px;
+      line-height: 28px;
     }
   }
   .iziModal {
@@ -458,6 +488,10 @@ body section .container > *, body header .row, body footer .row, .modal-opened .
 
 @media ($desktop) {
   #stayUpdated {
+    .registration-form-server-error {
+      transform: translateY(calc(-100% - 30px));
+      position: absolute;
+    }
     .container {
       position: relative;
       top: 50%;

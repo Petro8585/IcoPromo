@@ -6,24 +6,16 @@
       "description": "Rentberry Token is our proprietary cryptocurrency designed to create cross-border standards of rental process and keep all rental transactions as secure as possible."
     },
     {
-      "title": "Symbol",
+      "title": "Name",
       "description": "BERRY"
     },
     {
-      "title": "Sale Cap",
-      "description": "500,000,000 BERRY&nbsp;<br class=\"mobile-only\">(70% of all tokens)"
-    },
-    {
       "title": "Fixed Limit",
-      "description": "500,000 ETH"
+      "description": "100,000 ETH"
     },
     {
       "title": "Exchange",
       "description": "1 ETH = 1,400 BERRY"
-    },
-    {
-      "title": "Sale Price Function",
-      "description": "​1 BERRY = max(1 ETH/1,400 BERRY, [Amount Raised/$50,000,000] * 1 ETH/1,400 BERRY)"
     },
     {
       "title": "Currency",
@@ -39,28 +31,28 @@
     }
   ],
   "bonus": {
-    "title": "Vesting",
+    "title": "Discount",
     "discount": "Discount",
     "items": [
       {
-        "title": "1 month",
-        "id": "1-month"
+        "title": "24 hours",
+        "id": "12-month"
       },
       {
-        "title": "3 month",
-        "id": "3-month"
-      },
-      {
-        "title": "6 month",
-        "id": "6-month"
-      },
-      {
-        "title": "9 month",
+        "title": "2-3 days",
         "id": "9-month"
       },
       {
-        "title": "12 month",
-        "id": "12-month"
+        "title": "3-7 days",
+        "id": "6-month"
+      },
+      {
+        "title": "7-15 days",
+        "id": "3-month"
+      },
+      {
+        "title": "15+ days",
+        "id": "1-month"
       }
     ]
   },

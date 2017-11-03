@@ -1,3 +1,11 @@
+@-webkit-keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .first-screen {
   position: relative;
   &__city {
@@ -29,6 +37,29 @@
     }
     .timer {
       text-align: center;
+      & > * {
+        transition: opacity .2s ease-out;
+      }
+      &.first-screen-loader {
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -23px;
+          margin-top: -23px;
+          width: 46px;
+          height: 46px;
+          background: url("/images/loader.svg") center no-repeat;
+          background-size: 45px;
+          animation: rotating 1s linear infinite;
+        }
+        & > * {
+          opacity: 0;
+        }
+      }
       &-head {
         &-title {
           font-size: 20px;
@@ -101,6 +132,7 @@
             font-size: 20px;
             line-height: 28px;
             font-weight: bold;
+            max-width: 100%;
           }
           .comment {
             color: rgba(50, 48, 59, .5);

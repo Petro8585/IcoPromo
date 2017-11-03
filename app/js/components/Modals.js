@@ -22,9 +22,9 @@ var onSubmit = function (event) {
     $('#stayUpdated').addClass('show-result')
   }
   var onError = function () {
-    $('#registrationForm .server-error').fadeIn()
+    $('.registration-form-server-error').fadeIn()
     setTimeout(function () {
-      $('#registrationForm .server-error').fadeOut()
+      $('.registration-form-server-error').fadeOut()
     }, 3000)
   }
 
@@ -83,18 +83,22 @@ var fixInput = (function () {
 
   return {
     open: function() {
-      scrollTop = body.scrollTop()
-      body.css({
-        'height': window.innerHeight + 'px',
-        'overflow': 'hidden'
-      });
-      $(window).bind('resize', onResize)
+      scrollTop = $(document).scrollTop()
+      setTimeout(function() {
+        body.css({
+          'height': window.innerHeight + 'px',
+          'overflow': 'hidden'
+        });
+        $(window).bind('resize', onResize)
+      }.bind(this))
     },
     close: function() {
       body.css({
         'height': '',
         'overflow': ''
-      }).scrollTop(scrollTop || 0)
+      })
+
+      $(document).scrollTop(scrollTop || 0)
       $(window).unbind('resize', onResize)
     }
   }
@@ -110,25 +114,25 @@ $('#stayUpdated').iziModal({
   onOpened: onOpened,
   onClosed: onClosed,
   onClosing: function () {
+    fixInput.close()
     onClosing()
-    isMobile(function(mobile){
-      if(mobile) {
-        fixInput.close()
-      }
-    }).unsubscribe()
   },
   onOpening: function () {
+    fixInput.open()
     onOpening()
-    isMobile(function(mobile){
-      if(mobile) {
-        fixInput.open()
-      }
-    }).unsubscribe()
   }
 })
 
 $('.stay-updated-btn').click(function () {
-  $('#stayUpdated').iziModal('open')
+  isMobile(function(mobile){
+      if(mobile) {
+        setTimeout(function() {
+          $('#stayUpdated').iziModal('open')
+        }.bind(this))
+      } else {
+        $('#stayUpdated').iziModal('open')
+      }
+    }.bind(this))
 })
 
 $('.currency').blur(function () {
@@ -170,3 +174,60 @@ $('#roadshowModal').iziModal({
   onClosing: onClosing,
   onClosed: onClosed
 })
+
+$('.open-photo').click(function (e) {
+  $('#modalGallery').iziModal('open')
+  $(".modal-slider").slick('slickGoTo', e.target.dataset.index - 1);
+})
+
+$('#modalGallery').iziModal({
+  openFullscreen: true,
+  bodyOverflow: true,
+  closeButton: true,
+  transitionIn: 'fadeIn',
+  transitionOut: 'fadeOut',
+  onClosing: function () {
+    $('body').removeClass('modal-opened')
+
+    var currentSlide = $('.modal-slider').slick('slickCurrentSlide');
+    $('.simple-slider').slick('slickGoTo', currentSlide);
+  },
+  onOpening: function () {
+    $('body').addClass('modal-opened')
+  }
+})
+
+// set data-lazy path for image with hash
+var modalSlider = function () {
+  this.images = $('#modalGallery img[data-src]')
+
+  this.init()
+}
+
+modalSlider.prototype = {
+  init: function () {
+
+    this.images.each(function (index, img) {
+
+      var src = img.getAttribute('data-src')
+
+      img.setAttribute('data-lazy', src)
+      img.onload = function () {
+        img.removeAttribute('data-src')
+      }
+    })
+
+    $(".modal-slider").slick({
+      lazyLoad: 'ondemand',
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 300,
+      swipe: false,
+      fade: true,
+      infinite: false
+    })
+  }
+}
+
+
+

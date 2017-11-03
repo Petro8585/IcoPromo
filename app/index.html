@@ -9,6 +9,18 @@
   <title>@firstScreen.appTitle</title>
   <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
+  <!-- fb -->
+  <meta property="og:title" content="Decentralized Home Rental Platform" />
+  <meta property="og:description" content="Rentberry is the first rental platform powered by blockchain. Participate in the ICO to make your contribution to the long-awaited revolution in real estate."/>
+  <meta property="og:url" content="https://ico.rentberry.com/" />
+  <meta property="og:image" content="https://rentberry.com/blog/wp-content/uploads/2017/10/Rentberry.png"/>
+  <!-- tw -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rentberry_">
+  <meta name="twitter:title" content="Decentralized Home Rental Platform">
+  <meta name="twitter:description" content="Rentberry is the first rental platform powered by blockchain. Participate in the ICO to make your contribution to the long-awaited revolution in real estate.">
+  <meta name="twitter:image" content="https://rentberry.com/blog/wp-content/uploads/2017/10/Rentberry.png">
+
   <script src="https://use.typekit.net/phh1zho.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
 
@@ -27,21 +39,23 @@
 
   @include('./partials/_header.html')
 
-  @include('./partials/_first-screen.html')
+  <div class="wrapper">
+    @include('./partials/_first-screen.html')
 
-  @include('./partials/_about.html')
+    @include('./partials/_about.html')
 
-  @include('./partials/_orange-block.html')
+    @include('./partials/_orange-block.html')
 
-  @include('./partials/_product.html')
+    @include('./partials/_product.html')
 
-  @include('./partials/_why-rentberry.html')
+    @include('./partials/_why-rentberry.html')
 
-  @include('./partials/_team.html')
+    @include('./partials/_team.html')
 
-  @include('./partials/_subscription.html')
+    @include('./partials/_subscription.html')
 
-  @include('./partials/_footer.html')
+    @include('./partials/_footer.html')
+  </div>
 
   <!-- MODALS -->
   @include('./partials/modals/stay-updated.html')
@@ -51,6 +65,8 @@
   @include('./partials/modals/email-verified.html')
 
   @include('./partials/modals/roadshow.html')
+
+  @include('./partials/modals/modalGallery.html')
   <!-- END MODALS -->
 
   <!-- Google Tag Manager (noscript) -->

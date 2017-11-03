@@ -19,6 +19,19 @@ $(function () {
       {id: '#12-month', value: 0.275}
     ]
   )
+
+  isMobile(function(mobile){
+    if(!mobile) {
+      $(".simple-slider").slick({
+        slidesToShow: 3,
+        speed: 400,
+        swipe: false,
+        infinite: false,
+        variableWidth: true
+      })
+    }
+  })
+
   new TreeEffects('.roadmap-tree')
   new ShowAll('.why-rentberry__content-videos', '#showAllVideos', '.why-rentberry__content-videos-list')
   new ShowAll('.all-team-wrapper', '#showAllTeam', '.all-team')
@@ -26,6 +39,7 @@ $(function () {
   new ShowAll('#allAdvisors', '#showAllAdvisors', '#allAdvisorsList')
   new ScrollTop('#logo')
   new ScrollTop('#footer-logo')
+  new modalSlider()
 
   var slowScrolls = [
     new SlowScroll('.first-screen__content', 0.4, false),
@@ -40,6 +54,6 @@ $(function () {
   new Animations()
   new Counters('#participants', '#countries', '#money')
   new CommittedProgress('.commit-progress')
-  new MobileMenu('#menu-toggle', '.menu-close, #app-nav a, #app-nav .stay-updated-btn', '#app-nav')
+  // new MobileMenu('#menu-toggle', '.menu-close, #app-nav .stay-updated-btn', '#app-nav')
   new EventList('.roadshow-component')
 })

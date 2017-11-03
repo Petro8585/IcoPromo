@@ -24,6 +24,8 @@ var dataLoader = (function () {
 
   updateListeners()
 
+  $('#firstScreenLoader').removeClass('first-screen-loader')
+
   var config = {
     apiKey: 'AIzaSyBYzdxri6xHy9_74RidjVZtpLpXqQ8x1Fo',
     authDomain: 'jovial-lamp-163411.firebaseapp.com',

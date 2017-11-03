@@ -1,0 +1,14 @@
+<div id="modalGallery">
+
+  @include('../components/close-modal.html')
+
+  <div class="modal-slider slider">
+
+    @for (var i = 1; i < 12; i++) {
+      <div>
+        <img data-src="/images/slider/big/`+i+`.jpg">
+      </div>
+    }
+
+  </div>
+</div>

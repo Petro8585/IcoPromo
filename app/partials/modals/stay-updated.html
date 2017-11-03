@@ -1,6 +1,5 @@
 <div id="stayUpdated" class="modal">
   @include('../components/close-modal.html')
-
   <div class="container form-container">
     <div class="form-content">
       <div class="row middle-md">
@@ -22,7 +21,7 @@
 
         <div class="col-md-4 col-xs-10 col-xs-offset-1">
           <form novalidate="" id="registrationForm">
-            <div class="server-error">Oops, can’t connect to the server :(</div>
+            <div class="registration-form-server-error">Oops, can’t connect to the server :(</div>
 
             <div class="controls">
               <input data-validation="length" data-validation-length="min1" placeholder="First name" required
@@ -49,7 +48,7 @@
             </div>
 
             <p>
-              Please enter the amount in USD that you would like to <br/>
+              Please enter the amount in USD that you would like to <br class="desktop-only"/>
               participate with. It is not a commitment.
             </p>
 
@@ -58,7 +57,7 @@
               <label for="agree">I agree to <a href="#"><b>Terms & Conditions</b></a></label>
             </div>
 
-            <button>Submit</button>
+            <button id="submitRegistrationForm">Submit</button>
           </form>
         </div>
       </div>
@@ -70,14 +69,14 @@
       <div class="col-xs-10 col-md-12 col-xs-offset-1 col-md-offset-0">
         <div class="title">
           Please Verify Your Email Address
-          <p>
-            Check <a href="mailto:" id="username"></a> to complete your registration <br/>
-            for the Rentberry Token Pre-Sale Event.
-          </p>
         </div>
+        <p>
+          Check <a href="mailto:" id="username"></a> to complete your registration <br class="desktop-only"/>
+          for the Rentberry Token Pre-Sale Event.
+        </p>
       </div>
-      <div class="col-md-4 col-md-offset-4">
-        <button data-izimodal-close>Done</button>
+      <div class="col-md-4 col-xs-10 col-xs-offset-1 col-md-offset-4">
+        <button data-izimodal-close id="closeResultRegistrationForm">Done</button>
       </div>
     </div>
   </div>
